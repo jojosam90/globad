@@ -1,0 +1,2 @@
+# Serve about.html content at the root URL (force override index.html)
+/  /about.html  200!
