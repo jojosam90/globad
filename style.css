@@ -61,7 +61,8 @@
 }
 
 /* ===== Footer Branches Columns ===== */
-.fo_list2 {
+.footer .center .footer_right .fo_list2 {
+    max-width: none !important;
     display: flex !important;
     flex-wrap: wrap;
 }
@@ -73,8 +74,8 @@
     float: none !important;
     display: block !important;
     flex: 0 0 auto;
-    min-width: 110px;
-    margin-right: 1rem;
+    min-width: 0 !important;
+    margin-right: 24px;
 }
 .fo_list2 ul li {
     white-space: nowrap;
