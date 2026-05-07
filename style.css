@@ -150,17 +150,14 @@
     }
 }
 
-/* ===== Mobile menu marquee: below News, centred, one row ===== */
+/* ===== Mobile menu marquee: below News, centred ===== */
 .wap_menulist .picMarquee-left {
     position: relative !important;
     bottom: auto !important;
     left: 0 !important;
     width: 100% !important;
-    height: 80px !important;
-    overflow: hidden !important;
+    overflow: visible !important;
     margin-top: 32px;
-    display: flex;
-    align-items: center;
 }
 
 /* ===== Fix: glow orbs block clicks on banner content ===== */
