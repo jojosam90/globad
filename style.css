@@ -169,6 +169,18 @@
     white-space: nowrap;
 }
 
+@media screen and (max-width: 768px) {
+    .about_pl5 .pl5_box .pl5_box_tw .tw_l {
+        overflow: visible !important;
+    }
+    .about_pl5 .pl5_box .pl5_box_tw .tw_l ul {
+        margin-right: 4px !important;
+    }
+    .about_pl5 .pl5_box .pl5_box_tw .tw_l ul li {
+        font-size: 16px !important;
+    }
+}
+
 /* ===== Fix: glow orbs block clicks on banner content ===== */
 .about_banner .quan1,
 .about_banner .quan2 {
