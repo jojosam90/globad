@@ -61,11 +61,20 @@
 }
 
 /* ===== Footer Branches Columns ===== */
-.fo_list2 ul {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 1em;
-    min-width: 120px;
+.fo_list2 {
+    display: flex !important;
+    flex-wrap: wrap;
+}
+.fo_list2 > p {
+    flex: 0 0 100%;
+    width: 100%;
+}
+.fo_list2 > ul {
+    float: none !important;
+    display: block !important;
+    flex: 0 0 auto;
+    min-width: 110px;
+    margin-right: 1rem;
 }
 .fo_list2 ul li {
     white-space: nowrap;
