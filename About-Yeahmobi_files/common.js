@@ -249,7 +249,7 @@ $(".wap_close").click(function () {
 	$("body").css({ "overflow": "initial"});
 	$(".anniu").removeClass('on');
 });
-// if(IS_SCROLL_SHOW){
+// if(typeof IS_SCROLL_SHOW !== 'undefined' && IS_SCROLL_SHOW){
 // $(window).scroll(function () {
 // 	$(window).mousewheel(function(event) {
 // 		var wid = $(window).height();
@@ -269,7 +269,7 @@ $(".wap_close").click(function () {
 // 	})
 // });
 // }
-if(IS_SCROLL_SHOW){
+if(typeof IS_SCROLL_SHOW !== 'undefined' && IS_SCROLL_SHOW){
 var cubuk_seviye = $(document).scrollTop();
 var header_yuksekligi = $('.header').outerHeight();
 var wid = $(window).height();
