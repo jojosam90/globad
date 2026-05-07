@@ -1,0 +1,100 @@
+/* ===== Logo Size ===== */
+.header .logo img,
+.wap_header .logo img,
+.wap_menulist .logo img {
+    max-height: 48px;
+    width: auto;
+}
+
+/* ===== Shared Header / Nav Styles ===== */
+.header {
+    z-index: 99;
+    color: #ffffff;
+    background: none;
+}
+.fixedNav {
+    background: #090613 !important;
+}
+.header .nav > li > a { color: #ffffff; }
+.header .nav .navon > a {
+    background: url(https://www-source.yeahmobi.com/themes/Iafr/default/img/navon.png) no-repeat right 6px center;
+    background-size: .16rem;
+}
+.header .nav > li a::after { background: #fff; }
+.header .navright a { color: #ffffff; }
+.header .nav > li > a { color: #fff; }
+.header .nav > li > a::after { background: #fff; }
+.header .nav .nav_list::after { background: #fff; }
+.header .nav > li a { color: #fff; }
+.header .nav > li { color: #fff; }
+.header .navright .talk {
+    box-sizing: border-box;
+    padding-left: 0.32rem;
+    background: url(https://www-source.yeahmobi.com/themes/Iafr/default/img/talk2.png) no-repeat left center;
+    background-size: .24rem;
+}
+.header .nav .nav_list li:hover a:after { background: #fff; }
+.header .nav .nav_list { background: #090613; }
+
+/* ===== Mobile Header ===== */
+.wap_header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.wap_header .logo .logo1 { display: none; }
+.wap_header .logo .logo2 { display: block; }
+.wap_header .lin { color: #fff; }
+.wap_header .menu { color: #fff; }
+
+@media screen and (max-width: 768px) {
+    .wap_header { background: none; }
+    .wap_header .center { background: none; }
+}
+
+/* ===== Partner Logos Grid Centering ===== */
+.about_pl3 .pl3_box_b {
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ===== Footer Branches Columns ===== */
+.fo_list2 ul {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1em;
+}
+.fo_list2 ul:last-child li::before {
+    content: "| ";
+    color: #8C8C8C;
+}
+
+/* ===== Service Page Hero Animation ===== */
+.char-wrap {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
+.char-wrap .char {
+    display: inline-block;
+    transform: translateY(100%);
+    animation: charSlideUp 0.6s ease-out forwards;
+}
+
+@keyframes charSlideUp {
+    0%   { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+
+.hero-sub-fade {
+    opacity: 0;
+    animation: subFadeIn 0.8s ease forwards;
+}
+
+@keyframes subFadeIn {
+    0%   { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 0.6; transform: translateY(0); }
+}
