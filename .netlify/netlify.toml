@@ -7,7 +7,7 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "c:\\Users\\user\\OneDrive\\Desktop\\Yeahmobi"
+publish = "C:\\Users\\user\\OneDrive\\Desktop\\Yeahmobi"
 publishOrigin = "default"
 
 [build.environment]
