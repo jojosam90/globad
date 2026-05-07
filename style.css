@@ -164,6 +164,11 @@
     display: none !important;
 }
 
+/* ===== Fix: location list items must not word-wrap ===== */
+.about_pl5 .tw_l li {
+    white-space: nowrap;
+}
+
 /* ===== Fix: glow orbs block clicks on banner content ===== */
 .about_banner .quan1,
 .about_banner .quan2 {
