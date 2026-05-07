@@ -190,6 +190,11 @@
     pointer-events: none;
 }
 
+/* ===== Remove dark gradient shadow behind banner text ===== */
+.about_banner .about_banner_box .about_r .viedo_box .over_video::before {
+    display: none;
+}
+
 /* ===== Home Page Hero ===== */
 .home_hero {
     padding: 120px 0 80px;
