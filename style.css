@@ -65,6 +65,10 @@
     display: inline-block;
     vertical-align: top;
     margin-right: 1em;
+    min-width: 120px;
+}
+.fo_list2 ul li {
+    white-space: nowrap;
 }
 .fo_list2 ul:last-child li::before {
     content: "| ";
