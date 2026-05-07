@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Globad</title>
     <meta name="description" content="Home">
+    <meta name="keywords" content="Home">
+
+    <!-- Core CSS -->
     <link rel="stylesheet" href="./About-Yeahmobi_files/css.css">
     <link rel="stylesheet" href="./About-Yeahmobi_files/ny.css">
     <link rel="stylesheet" href="./About-Yeahmobi_files/animate.css">
@@ -15,12 +18,26 @@
     <link rel="stylesheet" href="./About-Yeahmobi_files/pop.css">
     <link rel="stylesheet" href="./About-Yeahmobi_files/select2.min.css">
     <link rel="stylesheet" href="style.css">
+
+
+    <!-- Core JS -->
     <script src="./About-Yeahmobi_files/jquery.min.js"></script>
+    <script src="./About-Yeahmobi_files/ie.js"></script>
     <script src="./About-Yeahmobi_files/wow.min.js"></script>
     <script src="./About-Yeahmobi_files/swiper.min.js"></script>
     <script src="./About-Yeahmobi_files/rellax.js"></script>
 </head>
 <body>
+
+<!-- ===== Popup / Form scripts ===== -->
+<link rel="stylesheet" href="./About-Yeahmobi_files/pop.css">
+<script src="./About-Yeahmobi_files/layer.js"></script>
+<script src="./About-Yeahmobi_files/jquery.validate.js"></script>
+<script src="./About-Yeahmobi_files/jquery.addvalidate.js"></script>
+<script src="./About-Yeahmobi_files/mousewheel.min.js"></script>
+<script src="./About-Yeahmobi_files/select2.min.js"></script>
+
+<script>var IS_SCROLL_SHOW = true;</script>
 
 <!-- ===== Desktop Header ===== -->
 <div class="header on-opacity fixedNav gizle sabit">
@@ -32,13 +49,13 @@
             <li class="m">
                 <a href="works.html" target="_self" title="Work" class="wow rotateInUpLeft" data-wow-duration="1.6s">Work</a>
             </li>
-            <li class="m navon">
+            <li class="m navon ons">
                 <a href="javascript:void(0);" title="Services" class="wow rotateInUpLeft" data-wow-duration="1.7s">Services</a>
                 <ul class="nav_list" style="display:none;">
-                    <li><a href="service-local-media.html">Local Media Marketing</a></li>
-                    <li><a href="service-influencer.html">Influencer Marketing</a></li>
-                    <li><a href="service-programmatic.html">Programmatic Advertising</a></li>
-                    <li><a href="service-integrate.html">Integrate Marketing</a></li>
+                    <li><a href="service-local-media.html" target="_self">Local Media Marketing</a></li>
+                    <li><a href="service-influencer.html" target="_self">Influencer Marketing</a></li>
+                    <li><a href="service-programmatic.html" target="_self">Programmatic Advertising</a></li>
+                    <li><a href="service-integrate.html" target="_self">Integrate Marketing</a></li>
                 </ul>
             </li>
             <li class="m">
@@ -46,6 +63,7 @@
             </li>
         </ul>
         <div class="logo wow fadeInDown" data-wow-duration="1s">
+            <!-- Replace with your own logo -->
             <a href="/" title="logo"><img src="logo.png" alt="Logo"></a>
         </div>
         <div class="navright">
@@ -94,13 +112,25 @@
             </ul>
         </div>
     </div>
+    <!-- Scrolling marquee in mobile menu -->
+    <div class="picMarquee-left">
+        <div class="bd">
+            <ul>
+                <li>let's talk! &nbsp;let's talk! &nbsp;let's talk! &nbsp;</li>
+                <li>let's talk! &nbsp;let's talk! &nbsp;let's talk! &nbsp;</li>
+                <li>let's talk! &nbsp;let's talk! &nbsp;let's talk! &nbsp;</li>
+            </ul>
+        </div>
+    </div>
 </div>
 
-<!-- ===== Talk Popup ===== -->
+<!-- ===== Talk / Contact Popup ===== -->
 <div class="talk_pop on-opacity">
     <div class="bai"></div>
     <div class="pop_center">
-        <div class="logo"><a href="/"><img src="logo.png" alt=""></a></div>
+        <div class="logo">
+            <a href="/" title="logo"><img src="logo.png" alt=""></a>
+        </div>
         <div class="close">close</div>
     </div>
     <div class="clear"></div>
@@ -109,23 +139,176 @@
         <div class="slideTxtBox">
             <div class="hd">
                 <ul>
-                    <li data-id="411" data-index="1" class="Advertiser_411"><span>Advertiser</span></li>
-                    <li data-id="413" data-index="2" class="Advertiser_413"><span>Media partner</span></li>
-                    <li data-id="412" data-index="3" class="Advertiser_412"><span>Influencer</span></li>
+                    <li data-id="411" data-index="1" class="Advertiser_411" onclick="track(3)"><span>Advertiser</span></li>
+                    <li data-id="413" data-index="2" class="Advertiser_413" onclick="track(4)"><span>Media partner</span></li>
+                    <li data-id="412" data-index="3" class="Advertiser_412" onclick="track(5)"><span>Influencer</span></li>
                 </ul>
             </div>
             <div class="bd">
-                <form id="form_do_1" method="post">
+                <!-- Advertiser Form -->
+                <form id="form_do_1" name="form_do_1" method="post" novalidate>
+                    <input type="hidden" name="tag_id" value="411">
                     <div class="pic"><img alt="Advertiser" src="./About-Yeahmobi_files/411_448_667_0.jpeg"></div>
                     <div class="form_box">
-                        <div class="input_box"><p>* Full name</p><input type="text" name="name" placeholder="Please enter" required></div>
-                        <div class="input_box"><p>* Email</p><input type="email" name="email" placeholder="Example@yourdomain.com" required></div>
-                        <div class="input_box"><p>* Phone/Wechat ID/Skype</p><input type="text" name="text_4" placeholder="Please enter" required></div>
+                        <div class="input_box"><p>* Full name</p><input type="text" name="name" autocomplete="off" placeholder="Please enter" required></div>
+                        <div class="input_box">
+                            <p>* Country</p>
+                            <select class="select99" name="text_1" required>
+                                <option value="">Please select</option>
+                                <option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Argentina">Argentina</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Bangladesh">Bangladesh</option><option value="Belgium">Belgium</option><option value="Brazil">Brazil</option><option value="Canada">Canada</option><option value="Chile">Chile</option><option value="China">China</option><option value="Colombia">Colombia</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Egypt">Egypt</option><option value="Ethiopia">Ethiopia</option><option value="Finland">Finland</option><option value="France">France</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Hong Kong">Hong Kong</option><option value="Hungary">Hungary</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kenya">Kenya</option><option value="Korea">Korea</option><option value="Kuwait">Kuwait</option><option value="Malaysia">Malaysia</option><option value="Mexico">Mexico</option><option value="Morocco">Morocco</option><option value="Myanmar">Myanmar</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Singapore">Singapore</option><option value="South Africa">South Africa</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Taiwan">Taiwan</option><option value="Thailand">Thailand</option><option value="Turkey">Turkey</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><option value="United States of America">United States of America</option><option value="Vietnam">Vietnam</option>
+                            </select>
+                        </div>
+                        <div class="input_box"><p>* Company name</p><input type="text" name="text_2" autocomplete="off" placeholder="Please enter" required></div>
+                        <div class="input_box">
+                            <p>* Company Type</p>
+                            <select class="select1" name="text_3" required>
+                                <option value="">Please select</option>
+                                <option value="Developer">Developer</option>
+                                <option value="Advertiser">Advertiser</option>
+                                <option value="Agency">Agency</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="input_box"><p>* Email</p><input type="email" name="email" autocomplete="off" placeholder="Example@yourdomain.com" required></div>
+                        <div class="input_box"><p>* Phone / Wechat ID / Skype</p><input type="text" name="text_4" autocomplete="off" placeholder="Please enter" required></div>
+                        <div class="input_box">
+                            <p>* I am interested in</p>
+                            <select class="select select_2" name="text_5[]" multiple required>
+                                <option value="Mobile app monetization">Mobile app monetization</option>
+                                <option value="User acquisition">User acquisition</option>
+                                <option value="Ad Exchange integration">Ad Exchange integration</option>
+                            </select>
+                        </div>
+                        <div class="input_box">
+                            <p>How did you hear about us?</p>
+                            <select class="select1" name="text_6">
+                                <option value="">Please select</option>
+                                <option value="Sales&Consultants">Sales &amp; Consultants</option>
+                                <option value="Events&Expo">Events &amp; Expo</option>
+                                <option value="Social Media">Social Media</option>
+                                <option value="News">News</option>
+                                <option value="Search engine">Search engine</option>
+                                <option value="Referral">Referral</option>
+                            </select>
+                        </div>
                         <div class="clear"></div>
-                        <input class="submit" type="submit" value="Send">
+                        <input type="hidden" name="type" value="1">
+                        <input class="submit" id="submitForm1" type="submit" value="Send" onclick="track(6)">
+                    </div>
+                </form>
+                <!-- Media Partner Form -->
+                <form id="form_do_2" name="form_do_2" method="post" novalidate>
+                    <input type="hidden" name="tag_id" value="413">
+                    <div class="pic"><img alt="Media partner" src="./About-Yeahmobi_files/413_448_667_0.jpeg"></div>
+                    <div class="form_box">
+                        <div class="input_box"><p>* Full name</p><input type="text" name="name" autocomplete="off" placeholder="Please enter" required></div>
+                        <div class="input_box">
+                            <p>* Country</p>
+                            <select class="select99" name="text_1" required>
+                                <option value="">Please select</option>
+                                <option value="Australia">Australia</option><option value="Brazil">Brazil</option><option value="Canada">Canada</option><option value="China">China</option><option value="France">France</option><option value="Germany">Germany</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Japan">Japan</option><option value="Korea">Korea</option><option value="Malaysia">Malaysia</option><option value="Singapore">Singapore</option><option value="Spain">Spain</option><option value="Thailand">Thailand</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><option value="United States of America">United States of America</option><option value="Vietnam">Vietnam</option>
+                            </select>
+                        </div>
+                        <div class="input_box"><p>Company name</p><input type="text" name="text_2" autocomplete="off" placeholder="Please enter"></div>
+                        <div class="input_box">
+                            <p>* Localization channel Type</p>
+                            <select class="select1" name="text_7" required>
+                                <option value="">Please select</option>
+                                <option value="OOH">OOH</option>
+                                <option value="DOOH">DOOH</option>
+                                <option value="TVC">TVC</option>
+                                <option value="Radio">Radio</option>
+                                <option value="Dub &Translate">Dub &amp; Translate</option>
+                                <option value="Offline-Event">Offline-Event</option>
+                                <option value="Live Shooting">Live Shooting</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="input_box"><p>* Email</p><input type="email" name="email" autocomplete="off" placeholder="Example@yourdomain.com" required></div>
+                        <div class="input_box"><p>* Phone / Wechat ID / Skype</p><input type="text" name="text_4" autocomplete="off" placeholder="Please enter" required></div>
+                        <div class="input_box">
+                            <p>How did you hear about us?</p>
+                            <select class="select1" name="text_6">
+                                <option value="">Please select</option>
+                                <option value="Social Media">Social Media</option>
+                                <option value="Search engine">Search engine</option>
+                                <option value="Referral">Referral</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                        <input type="hidden" name="type" value="1">
+                        <input class="submit" id="submitForm2" type="submit" value="Send" onclick="track(7)">
+                    </div>
+                </form>
+                <!-- Influencer Form -->
+                <form id="form_do_3" name="form_do_3" method="post" novalidate>
+                    <input type="hidden" name="tag_id" value="412">
+                    <div class="pic"><img alt="Influencer" src="./About-Yeahmobi_files/412_448_667_0.jpeg"></div>
+                    <div class="form_box">
+                        <div class="input_box"><p>* Full name</p><input type="text" name="name" autocomplete="off" placeholder="Please enter" required></div>
+                        <div class="input_box">
+                            <p>* Country</p>
+                            <select class="select99" name="text_1" required>
+                                <option value="">Please select</option>
+                                <option value="Australia">Australia</option><option value="Brazil">Brazil</option><option value="Canada">Canada</option><option value="France">France</option><option value="Germany">Germany</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Japan">Japan</option><option value="Korea">Korea</option><option value="Malaysia">Malaysia</option><option value="Singapore">Singapore</option><option value="Thailand">Thailand</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><option value="United States of America">United States of America</option>
+                            </select>
+                        </div>
+                        <div class="input_box"><p>* Main channel URL</p><input type="text" name="text_9" autocomplete="off" placeholder="https://" required></div>
+                        <div class="input_box">
+                            <p>* Channel Type</p>
+                            <select class="select1" name="text_10" required>
+                                <option value="">Please select</option>
+                                <option value="Beauty">Beauty</option>
+                                <option value="Fashion">Fashion</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Entertainment">Entertainment</option>
+                                <option value="Games">Games</option>
+                                <option value="Lifestyle">Lifestyle</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="input_box"><p>* Email</p><input type="email" name="email" autocomplete="off" placeholder="Example@yourdomain.com" required></div>
+                        <div class="input_box">
+                            <p>* Platform</p>
+                            <select class="select1" name="text_11" required>
+                                <option value="">Please select</option>
+                                <option value="YouTube">YouTube</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Tik Tok">TikTok</option>
+                                <option value="Twitch">Twitch</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="input_box"><p>* Followers</p><input type="number" name="text_13" autocomplete="off" placeholder="Please enter" required></div>
+                        <div class="input_box">
+                            <p>* Expected cooperation form</p>
+                            <select class="select select_2" name="text_12[]" multiple required>
+                                <option value="Dedicated video">Dedicated video</option>
+                                <option value="Integrated video">Integrated video</option>
+                                <option value="Post">Post</option>
+                                <option value="Reel">Reel</option>
+                                <option value="Livestream">Livestream</option>
+                            </select>
+                        </div>
+                        <div class="input_box"><p>* Expected budget</p><input type="text" name="text_14" autocomplete="off" placeholder="Please enter" required></div>
+                        <div class="clear"></div>
+                        <input type="hidden" name="type" value="1">
+                        <input class="submit" id="submitForm3" type="submit" value="Send" onclick="track(8)">
                     </div>
                 </form>
             </div>
+        </div>
+    </div>
+    <!-- Scrolling marquee in popup -->
+    <div class="picMarquee-left">
+        <div class="bd">
+            <ul>
+                <li>let's talk! &nbsp;let's talk! &nbsp;let's talk! &nbsp;</li>
+                <li>let's talk! &nbsp;let's talk! &nbsp;let's talk! &nbsp;</li>
+                <li>let's talk! &nbsp;let's talk! &nbsp;let's talk! &nbsp;</li>
+            </ul>
         </div>
     </div>
 </div>
@@ -134,25 +317,252 @@
 <script src="./About-Yeahmobi_files/jquery.SuperSlide.2.1.3.js"></script>
 <script src="./About-Yeahmobi_files/common.js"></script>
 
-<!-- ===== Page Content ===== -->
-<main style="min-height:80vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:4rem 2rem;">
-    <div>
-        <h1 style="font-size:2.5rem; margin-bottom:1rem;">Home</h1>
-        <p style="opacity:0.6;">Home page content goes here.</p>
+<!-- IP check: hides custom chat button for CN/HK/MO/TW visitors -->
+<script>
+var __formApp__ = "/Forms/apply.html";
+var window_w = $(window).width();
+if ((/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent))) {
+    if (window_w > 1201 && window_w < 1441) $(".nav_list").css("padding","0 12.5% 0.1rem");
+    if (window_w > 1440 && window_w < 1700) $(".nav_list").css("padding","0 15% 0.1rem");
+}
+const RETRY_CONFIG = { maxTimes: 3, delay: 1000 };
+async function checkIsChinaIP(retryCount = 0) {
+    try {
+        const ipRes = await fetch("https://manage.yeahmobi.com/waiterapi/pub/getIpAddress");
+        if (!ipRes.ok) {
+            if (retryCount < RETRY_CONFIG.maxTimes) {
+                await new Promise(r => setTimeout(r, RETRY_CONFIG.delay));
+                return checkIsChinaIP(retryCount + 1);
+            }
+            throw new Error("IP check failed");
+        }
+        const data = await ipRes.json();
+        if (data.flag === "success" && ['CN','HK','MO','TW'].includes(data.data.value.countryCode)) {
+            hideChatWidgets();
+        }
+    } catch (e) {
+        if (retryCount < RETRY_CONFIG.maxTimes) {
+            await new Promise(r => setTimeout(r, RETRY_CONFIG.delay));
+            return checkIsChinaIP(retryCount + 1);
+        }
+        hideChatWidgets();
+    }
+}
+function hideChatWidgets() {
+    var el = document.querySelector('.customTalk');
+    if (el) el.style.display = 'none';
+    var obs = new MutationObserver(function(mutations) {
+        mutations.forEach(function(m) {
+            if (m.addedNodes.length) {
+                var t = document.querySelector('.widget-visible');
+                if (t) { t.remove(); obs.disconnect(); }
+            }
+        });
+    });
+    obs.observe(document.body, { childList: true, subtree: true });
+    window.addEventListener('beforeunload', function() { obs.disconnect(); });
+}
+checkIsChinaIP();
+</script>
+
+<!-- ===== About Banner ===== -->
+<div class="about_banner rellax" data-rellax-speed="-3">
+    <div class="quan1"></div>
+    <div class="quan2"></div>
+    <div class="center">
+        <div class="about_banner_box">
+            <div class="about_l">
+                <h3 class="wow rotateInUpLeft">A digital integrated marketing platform with programmatic advertising as its core.</h3>
+                <p class="wow rotateInUpLeft on-opacity" data-wow-delay=".5s">We are committed to providing you with Global Integrated Digital Marketing Services.</p>
+            </div>
+            <div class="about_r">
+                <div class="viedo_box">
+                    <div class="over_video">
+                        <video id="video" muted loop poster="/Uploads/block/20230421/644232117bcd4.jpg" src="/Uploads/block/20230426/6448d925b1932.mp4"></video>
+                    </div>
+                    <div class="tp_box">
+                        <img class="suiji" src="./About-Yeahmobi_files/365_384_200_0.jpeg" alt="">
+                        <span class="on-opacity">/ About</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</main>
+</div>
+
+<!-- ===== We Have / We Can Provide ===== -->
+<div class="about_pl2">
+    <div class="center">
+        <div class="pl2_box">
+            <div class="pl2_box_t">
+                <h2 class="wow rotateInUpLeft on-opacity">/ WE HAVE：</h2>
+                <h3 class="wow rotateInUpLeft on-opacity"><span>-</span> Advanced Advertising Technology.</h3>
+                <h3 class="wow rotateInUpLeft on-opacity"><span>-</span> Extensive Professional Experience in Media Operation.</h3>
+                <h3 class="wow rotateInUpLeft on-opacity"><span>-</span> Strong Ability in Integrated Marketing.</h3>
+                <p class="wow rotateInUpLeft on-opacity">Through our customized digital integrated marketing plan, specialized media management experience and Ad-intelligent platform.</p>
+            </div>
+            <div class="pl2_box_t pl2_box_b">
+                <h2 class="wow rotateInUpLeft on-opacity">/ WE CAN PROVIDE：</h2>
+                <h3 class="wow rotateInUpLeft on-opacity"><span>-</span> Richer Marketing Resources.</h3>
+                <h3 class="wow rotateInUpLeft on-opacity"><span>-</span> More Efficient Marketing Campaigns.</h3>
+                <h3 class="wow rotateInUpLeft on-opacity"><span>-</span> Higher Advertising ROI.</h3>
+                <p class="wow rotateInUpLeft on-opacity">Thereby helping you to better achieve your advertising and marketing goal.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== Meet Our Friends ===== -->
+<div class="about_pl3">
+    <div class="center">
+        <div class="pl3_box">
+            <div class="pl3_box_t">
+                <div class="pl3_box_t_l">
+                    <h3 class="wow rotateInUpLeft">MEET OUR<br>FRIENDS</h3>
+                </div>
+                <div class="pl3_box_t_r wow rotateInUpLeft">
+                    <p class="on-opacity">Up until now, we have helped more than 5,000 enterprises reach overseas users efficiently, and applied its complete going global service system to fulfill differentiated needs of advertisers in different industries. Our clients include famous enterprises like Huawei, Alibaba, Tencent, Netease, ByteDance, Baidu, Kwai, iQiyi, SHEIN, Lazada, etc.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pl3_box_b swiper wow fadeInUpBig" id="mySwiper2">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide"><a href="javascript:void(0);"><img src="./About-Yeahmobi_files/82_282_114_0.png" alt="Partner 1"></a></li>
+            <li class="swiper-slide"><a href="javascript:void(0);"><img src="./About-Yeahmobi_files/83_282_114_0.png" alt="Partner 2"></a></li>
+            <li class="swiper-slide"><a href="javascript:void(0);"><img src="./About-Yeahmobi_files/84_282_114_0.png" alt="Partner 3"></a></li>
+            <li class="swiper-slide"><a href="javascript:void(0);"><img src="./About-Yeahmobi_files/85_282_114_0.png" alt="Partner 4"></a></li>
+            <li class="swiper-slide"><a href="javascript:void(0);"><img src="./About-Yeahmobi_files/86_282_114_0.png" alt="Partner 5"></a></li>
+            <li class="swiper-slide"><a href="javascript:void(0);"><img src="./About-Yeahmobi_files/87_282_114_0.png" alt="Partner 6"></a></li>
+            <li class="swiper-slide"><a href="javascript:void(0);"><img src="./About-Yeahmobi_files/88_282_114_0.png" alt="Partner 7"></a></li>
+            <li class="swiper-slide"><a href="javascript:void(0);"><img src="./About-Yeahmobi_files/89_282_114_0.png" alt="Partner 8"></a></li>
+            <li class="swiper-slide"><a href="javascript:void(0);"><img src="./About-Yeahmobi_files/102_282_114_0.png" alt="Partner 9"></a></li>
+            <li class="swiper-slide"><a href="javascript:void(0);"><img src="./About-Yeahmobi_files/91_282_114_0.png" alt="Partner 10"></a></li>
+            <li class="swiper-slide"><a href="javascript:void(0);"><img src="./About-Yeahmobi_files/92_282_114_0.png" alt="Partner 11"></a></li>
+            <li class="swiper-slide"><a href="javascript:void(0);"><img src="./About-Yeahmobi_files/93_282_114_0.png" alt="Partner 12"></a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- ===== Stats ===== -->
+<div class="about_pl4">
+    <div class="center">
+        <div class="pl4_box">
+            <ul>
+                <li>
+                    <h3 class="wow rotateInUpLeft">5000+</h3>
+                    <p class="wow rotateInUpLeft on-opacity">Global Advertisers</p>
+                </li>
+                <li>
+                    <h3 class="wow rotateInUpLeft">200+</h3>
+                    <p class="wow rotateInUpLeft on-opacity">Coverage Countries / Regions</p>
+                </li>
+                <li>
+                    <h3 class="wow rotateInUpLeft">7 Billion+</h3>
+                    <p class="wow rotateInUpLeft on-opacity">Standalone Devices</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- ===== Locations ===== -->
+<div class="about_pl5">
+    <div class="quan1"></div>
+    <div class="quan2"></div>
+    <div class="center">
+        <div class="pl5_box">
+            <p class="wow rotateInUpLeft">The growth happens when we work together across borders and time zones.</p>
+            <h3 class="wow rotateInUpLeft">LOCATIONS</h3>
+            <div class="pl5_box_tw">
+                <div class="tw_l">
+                    <ul>
+                        <li data-jl="1" class="h1 txt_1 wow rotateInUpLeft on-opacity" data-letters="| China">| China</li>
+                        <li data-jl="2" class="h2 txt_2 wow rotateInUpLeft on-opacity" data-letters="| USA">| USA</li>
+                        <li data-jl="3" class="h3 txt_3 wow rotateInUpLeft on-opacity" data-letters="| India">| India</li>
+                        <li data-jl="4" class="h4 txt_4 wow rotateInUpLeft on-opacity" data-letters="| Indonesia">| Indonesia</li>
+                        <li data-jl="5" class="h5 txt_5 wow rotateInUpLeft on-opacity" data-letters="| UAE">| UAE</li>
+                        <li data-jl="6" class="h6 txt_6 wow rotateInUpLeft on-opacity" data-letters="| Germany">| Germany</li>
+                        <li data-jl="7" class="h7 txt_7 wow rotateInUpLeft on-opacity" data-letters="| Japan">| Japan</li>
+                        <li data-jl="8" class="h8 txt_8 wow rotateInUpLeft on-opacity" data-letters="| Korea">| Korea</li>
+                        <li data-jl="9" class="h9 txt_9 wow rotateInUpLeft on-opacity" data-letters="| Singapore">| Singapore</li>
+                        <li data-jl="10" class="h10 txt_10 wow rotateInUpLeft on-opacity" data-letters="| Spain">| Spain</li>
+                    </ul>
+                </div>
+                <div class="tw_r">
+                    <div id="pictures">
+                        <img data-id="1" class="tu1" src="./About-Yeahmobi_files/47_531_605_0.jpeg" alt="China" style="z-index:10;top:50%;left:50%;">
+                        <img data-id="2" class="tu2" src="./About-Yeahmobi_files/48_531_605_0.png" alt="USA" style="z-index:1;top:50%;left:50%;">
+                        <img data-id="3" class="tu3" src="./About-Yeahmobi_files/49_531_605_0.jpeg" alt="India" style="z-index:2;top:50%;left:50%;">
+                        <img data-id="4" class="tu4" src="./About-Yeahmobi_files/50_531_605_0.png" alt="Indonesia" style="z-index:3;top:50%;left:50%;">
+                        <img data-id="5" class="tu5" src="./About-Yeahmobi_files/51_531_605_0.jpeg" alt="UAE" style="z-index:4;top:50%;left:50%;">
+                        <img data-id="6" class="tu6" src="./About-Yeahmobi_files/52_531_605_0.png" alt="Germany" style="z-index:5;top:50%;left:50%;">
+                        <img data-id="7" class="tu7" src="./About-Yeahmobi_files/53_531_605_0.jpeg" alt="Japan" style="z-index:6;top:50%;left:50%;">
+                        <img data-id="8" class="tu8" src="./About-Yeahmobi_files/54_531_605_0.png" alt="Korea" style="z-index:7;top:50%;left:50%;">
+                        <img data-id="9" class="tu9" src="./About-Yeahmobi_files/55_531_605_0.jpeg" alt="Singapore" style="z-index:8;top:50%;left:50%;">
+                        <img data-id="10" class="tu10" src="./About-Yeahmobi_files/56_531_605_0.png" alt="Spain" style="z-index:9;top:50%;left:50%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== Growth Road ===== -->
+<div class="about_pl6">
+    <div class="center">
+        <div class="pl6_box">
+            <div class="pl6_box_l">
+                <p class="wow rotateInUpLeft on-opacity">Our journey is the sea of stars.</p>
+                <h3 class="wow rotateInUpLeft">Growth Road</h3>
+            </div>
+            <div class="pl6_box_r">
+                <div class="r_left prev"></div>
+                <div class="r_right next"></div>
+            </div>
+        </div>
+        <div class="pl6_lun swiper" id="mySwiper3">
+            <ul class="swiper-wrapper on-drag">
+                <li class="swiper-slide" data-key="2022"><div class="road_box"><p>Tiger Roar Award "Best Intelligent Marketing System/Tool/Platform for the Year"</p><p>"Innovation Award for Going-overseas Enterprises" by Huawei Cloud</p><p>"Agent Award" of Twitter Greater China</p><p>Listed in Shenzhen Stock Exchange (stock code: 301171)</p></div><h2>2022</h2></li>
+                <li class="swiper-slide" data-key="2021"><div class="road_box"><p>Winner of the Silver Award of Overseas Group by ROI Festival</p><p>Going-global Breakthrough Partner of TikTok for Business</p><p>Member of CAA China Advertising Association</p><p>Established partnership with Chinese media platforms such as Ocean Engine, Qianchuan, Kwai, etc</p></div><h2>2021</h2></li>
+                <li class="swiper-slide" data-key="2020"><div class="road_box"><p>Ocean Engine Partner of Channel Service Contribution (Going Global)</p><p>Alibaba Best Supplier of the Year</p><p>Valuable Chinese Enterprise in Electronic Information Industry by MIIT</p><p>China Unicorn Enterprise</p></div><h2>2020</h2></li>
+                <li class="swiper-slide" data-key="2019"><div class="road_box"><p>APN Advanced Consulting Partner of Amazon Web Services</p><p>Top 100 Leading Chinese Enterprises in Digital Service and Service Outsourcing</p><p>"Belt and Road" 100 Promoted Cases in electronic information industry</p><p>National Key Enterprise for Cultural Export by the Ministry of Commerce</p></div><h2>2019</h2></li>
+                <li class="swiper-slide" data-key="2018"><div class="road_box"><p>Online Business Expansion Award-B2C Export and Foreign Trade by Google</p><p>Joined IAB Tech Lab to develop digital advertising industry standards</p><p>Branched out into programmatic marketing business</p><p>Top 100 Software Enterprises in China</p></div><h2>2018</h2></li>
+                <li class="swiper-slide" data-key="2017"><div class="road_box"><p>Outstanding Advertising Partner in China by Facebook</p><p>Most Influential Cross-border E-commerce Marketing Service Provider</p><p>Most Valuable Investment Target in TMT Industry</p><p>Asia's TOP1 global mobile advertising platform</p></div><h2>2017</h2></li>
+                <li class="swiper-slide" data-key="2016"><div class="road_box"><p>Listed on the NEEQ</p><p>Introduced DMP data, automated marketing and other technical products</p><p>Top 100 Most Innovative NEEQ Enterprises</p></div><h2>2016</h2></li>
+                <li class="swiper-slide" data-key="2015"><div class="road_box"><p>The Fastest Growing Core Partner in Greater China Region by Google</p><p>The Core Partner of the Best Mobile Advertising Service in Mainland China</p><p>IDG's Best Overseas Mobile Marketing Service Provider of the Year</p></div><h2>2015</h2></li>
+                <li class="swiper-slide" data-key="2014"><div class="road_box"><p>Worked with outstanding Chinese companies such as Baidu and 360</p></div><h2>2014</h2></li>
+                <li class="swiper-slide" data-key="2011"><div class="road_box"><p>Started overseas marketing business</p><p>Made strategic arrangement for mobile services</p></div><h2>2011</h2></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 <!-- ===== Let's Talk Banner ===== -->
-<div class="letstalk on-letstalk wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-    <div class="a"><div class="ab">
-        <ul id="marquee_1">
-            <li>你好</li><li>Hello</li><li>Bonjour</li><li>Hola</li><li>Hallo</li>
+<div class="letstalk on-letstalk wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" onclick="track(2)">
+    <div class="a">
+        <div class="ab">
+            <ul id="marquee_1">
+                <li>你好</li><li>Hello</li><li>안녕하세요</li><li>こんにちは</li>
+                <li>Bonjour</li><li>Halo</li><li>नमस्ते</li><li>مرحبًا</li>
+                <li>Привет</li><li>Hola</li><li>Hallo</li>
+            </ul>
+            <ul id="marquee_2">
+                <li>你好</li><li>Hello</li><li>안녕하세요</li><li>こんにちは</li>
+                <li>Bonjour</li><li>Halo</li><li>नमस्ते</li><li>مرحبًا</li>
+                <li>Привет</li><li>Hola</li><li>Hallo</li>
+            </ul>
+        </div>
+    </div>
+    <div class="youwill">
+        <ul>
+            <li>Start a wonderful journey of growth with us.</li>
+            <li>Start a wonderful journey of growth with us.</li>
+            <li>Start a wonderful journey of growth with us.</li>
+            <li>Start a wonderful journey of growth with us.</li>
+            <li>Start a wonderful journey of growth with us.</li>
         </ul>
-    </div></div>
-    <div class="youwill"><ul>
-        <li>Start a wonderful journey of growth with us.</li>
-        <li>Start a wonderful journey of growth with us.</li>
-    </ul></div>
+    </div>
 </div>
 
 <!-- ===== Footer ===== -->
@@ -163,6 +573,20 @@
             <a href="https://www.linkedin.com/company/yeahmobi/" target="_blank" class="pic">
                 <img alt="Linkedin" src="./About-Yeahmobi_files/6446326e65610.png">
             </a>
+            <div class="wx">
+                <div class="wxico"><img alt="" src="./About-Yeahmobi_files/645615dd417cb.png"></div>
+                <div class="wx_pop">
+                    <img alt="" src="./About-Yeahmobi_files/64561ee65eea0.jpg">
+                    <p>Wechat scan code to follow us</p>
+                </div>
+            </div>
+            <div class="wap_wxpop">
+                <div class="box">
+                    <div class="back">BACK</div>
+                    <img alt="" src="./About-Yeahmobi_files/64561ee65eea0.jpg">
+                    <p>Long press to identify the QR code to follow our WeChat public account.</p>
+                </div>
+            </div>
         </div>
         <div class="footer_right">
             <div class="fo_list1">
@@ -196,20 +620,143 @@
         </div>
         <div class="clear"></div>
         <div class="ban">
-            <div class="left"><p>GlobAd Sdn Bhd</p><a href="privacy.html">Privacy</a></div>
+            <div class="left">
+                <!-- Update company name -->
+                <p>GlobAd Sdn Bhd</p>
+                <a href="privacy.html">Privacy</a>
+            </div>
             <div class="gotop">back to top</div>
         </div>
     </div>
 </div>
 
-<div class="mouse"><div class="cursor"></div><div class="follower"><span><div class="click">Click</div></span></div></div>
+<!-- ===== Mouse Cursor Follower ===== -->
+<div class="mouse">
+    <div class="cursor"></div>
+    <div class="follower">
+        <span>
+            <div class="prev"></div>
+            <div class="next"></div>
+            <div class="click">Click</div>
+            <div class="open">Open</div>
+            <div class="drag" style="display:none;">Drag</div>
+            <div class="learnmore">Learn <br> More</div>
+            <div class="lettalk" style="display:none;">Let's <br> Talk</div>
+        </span>
+    </div>
+</div>
 
+<!-- ===== Tawk.to Live Chat Widget ===== -->
+<!-- Replace the property ID and widget ID below with your own from tawk.to -->
+<script type="text/javascript">
+var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+(function(){
+    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/643d14404247f20fefec10e2/1gu79e7l3';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1, s0);
+})();
+</script>
+
+<!-- ===== External JS ===== -->
 <script src="./About-Yeahmobi_files/tweenmax.min.js"></script>
 <script src="./About-Yeahmobi_files/index.js"></script>
 <script src="./About-Yeahmobi_files/lazyload.js"></script>
 <script src="./About-Yeahmobi_files/global.js"></script>
 <script src="script.js"></script>
 
+<!-- ===== About Page: Swiper + Animations ===== -->
+<script>
+$(function () {
+    var _width = $(window).width();
+    if (_width > 1024) {
+        var videoEl = document.getElementById("video");
+        if (videoEl) videoEl.play();
+        new Rellax('.rellax');
+        new Swiper('#mySwiper2', {
+            slidesPerView: 4,
+            slidesPerColumn: 3,
+            slidesPerColumnFill: "column",
+            speed: 1000,
+            autoplay: { delay: 1000, stopOnLastSlide: false, disableOnInteraction: true },
+            on: { touchMove: function(swiper, e) { $('.follower').css({ left: swiper.clientX, top: swiper.clientY }).show(); } }
+        });
+    } else {
+        $(".quan1, .quan2").css("display", "none");
+        new Swiper('#mySwiper2', {
+            slidesPerView: 2,
+            slidesPerColumn: 6,
+            slidesPerColumnFill: "column",
+            speed: 1000,
+            autoplay: { delay: 1000, stopOnLastSlide: false, disableOnInteraction: true }
+        });
+    }
+});
+
+new Swiper("#mySwiper3", {
+    spaceBetween: 0,
+    slidesPerView: "auto",
+    navigation: { nextEl: ".next", prevEl: ".prev" },
+    on: { touchMove: function(swiper, e) { $('.follower').css({ left: swiper.clientX, top: swiper.clientY }).show(); } }
+});
+
+if (/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent)) {
+    $(".quan1, .quan2").css("display", "none");
+}
+
+// Location photo z-index cycling animation
+$(document).ready(function () {
+    var z = 0, inAnimation = false;
+    $('#pictures img').each(function () { z++; $(this).css('z-index', z); });
+
+    function swapFirstLast() {
+        if (inAnimation) return;
+        inAnimation = true;
+        var top = z, bot = 1;
+        $('#pictures img').each(function () {
+            var cur = parseInt($(this).css('z-index'));
+            if (cur === top) {
+                $(this).animate({}, 'slow', function () {
+                    $(this).css('z-index', bot).animate({ 'left': '50%' }, 'slow', function () { inAnimation = false; });
+                });
+            } else {
+                $(this).animate({ 'top': '50%' }, 'slow', function () {
+                    $(this).css('z-index', cur + 1);
+                });
+            }
+        });
+    }
+
+    var ding = setInterval(swapFirstLast, 1000);
+    $(".tw_r").mouseover(function () { clearInterval(ding); });
+    $(".tw_r").mouseout(function () { ding = setInterval(swapFirstLast, 1000); });
+
+    // Group location list items into sub-lists
+    var _len = 5;
+    $(".tw_l > ul > li").each(function (i) {
+        $(".tw_l > ul > li").slice(i * _len, i * _len + _len).wrapAll("<ul></ul>");
+    });
+
+    // Random hero image
+    var imgList = [
+        "./About-Yeahmobi_files/365_384_200_0.jpeg",
+        "./About-Yeahmobi_files/365_384_200_0.jpeg",
+        "./About-Yeahmobi_files/365_384_200_0.jpeg"
+    ];
+    $(".suiji").attr("src", imgList[Math.floor(Math.random() * imgList.length)]);
+});
+
+// Init select2 on all selects inside popup
+$(function () {
+    if ($.fn.select2) {
+        $('.talk_pop select').select2({ width: 'auto' });
+    }
+});
+</script>
+
 </body>
 </html>
+
 
