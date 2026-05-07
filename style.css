@@ -118,6 +118,60 @@
     color: #8C8C8C;
 }
 
+/* ===== Mobile Responsive Fixes ===== */
+@media screen and (max-width: 768px) {
+
+    /* Service page hero — override inline rem-based styles */
+    main {
+        padding: 80px 20px !important;
+        min-height: 50vh !important;
+    }
+    main h1 {
+        font-size: 36px !important;
+        margin-bottom: 16px !important;
+        line-height: 1.2 !important;
+    }
+    main p {
+        font-size: 15px !important;
+        max-width: 100% !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Mobile header — keep visible with dark bg */
+    .wap_header {
+        background: rgba(9,6,19,0.92) !important;
+    }
+    .wap_header .center {
+        background: none !important;
+    }
+
+    /* Email picker dropdown — open to the right on mobile */
+    .wap_header .email-picker-dropdown {
+        left: 0;
+        right: auto;
+    }
+
+    /* Privacy page */
+    .privacy-wrap {
+        padding: 80px 16px 60px;
+        font-size: 15px;
+    }
+    .privacy-wrap h1 {
+        font-size: 28px;
+    }
+    .privacy-wrap h2 {
+        font-size: 18px;
+    }
+
+    /* Footer — stack columns */
+    .footer .center .footer_right {
+        flex-wrap: wrap;
+    }
+    .fo_list2 > ul {
+        margin-right: 16px;
+    }
+}
+
 /* ===== Service Page Hero Animation ===== */
 .char-wrap {
     display: inline-block;
