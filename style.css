@@ -305,6 +305,83 @@
     .service_card h3 { font-size: 15px !important; }
 }
 
+/* ===== Works Page — Case Study Grid ===== */
+.work_list {
+    background: #fff;
+    padding-bottom: 80px;
+}
+.work_list .center > ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 80px;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.work_list ul li {
+    width: 32%;
+    margin-right: 2%;
+    margin-top: 48px;
+    position: relative;
+    list-style: none;
+}
+.work_list ul li:nth-child(3n) { margin-right: 0; }
+.work_list ul li:nth-child(1),
+.work_list ul li:nth-child(2),
+.work_list ul li:nth-child(3) { margin-top: 0; }
+.work_list ul li .xianzhi {
+    position: relative;
+    overflow: hidden;
+    background: #0d0a1f;
+}
+.work_list ul li:nth-child(2n-1) .xianzhi { padding-top: 68.8%; }
+.work_list ul li:nth-child(2n) .xianzhi {
+    padding-top: 39.1%;
+    margin-top: 29.7%;
+}
+.work_list ul li .xianzhi img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.work_list ul li .xianzhi .work_box {
+    padding: 10px 16px;
+    background: #fff;
+    font-size: 14px;
+    color: #262626;
+    line-height: 1.5;
+    font-weight: 600;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    z-index: 2;
+    letter-spacing: 1px;
+}
+.work_list ul li:hover .xianzhi img { transform: scale(1.1); }
+
+@media screen and (max-width: 768px) {
+    .work_list ul li {
+        width: 48%;
+        margin-right: 4% !important;
+        margin-top: 20px !important;
+    }
+    .work_list ul li:nth-child(2n) { margin-right: 0 !important; }
+    .work_list ul li:nth-child(1),
+    .work_list ul li:nth-child(2) { margin-top: 0 !important; }
+    .work_list ul li .xianzhi {
+        padding-top: 65% !important;
+        margin-top: 0 !important;
+    }
+}
+
 /* ===== Service Page Hero Animation ===== */
 .char-wrap {
     display: inline-block;
