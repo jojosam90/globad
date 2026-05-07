@@ -156,8 +156,12 @@
     bottom: auto !important;
     left: 0 !important;
     width: 100% !important;
-    overflow: visible !important;
+    overflow: hidden !important;
     margin-top: 32px;
+}
+.wap_menulist .picMarquee-left::before,
+.wap_menulist .picMarquee-left::after {
+    display: none !important;
 }
 
 /* ===== Fix: glow orbs block clicks on banner content ===== */
