@@ -387,6 +387,55 @@
     }
 }
 
+/* ===== Email Choice Popup (desktop) ===== */
+.email-choice-popup {
+    position: fixed;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+    z-index: 999999;
+    min-width: 210px;
+    display: none;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.email-choice-popup p {
+    font-size: 11px;
+    color: #999;
+    padding: 10px 18px 6px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.email-choice-popup a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 18px;
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid #f5f5f5;
+    transition: background 0.15s;
+}
+.email-choice-popup a:last-child { border-bottom: none; }
+.email-choice-popup a:hover { background: #f7f7f7; }
+.email-choice-popup a span.badge {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    flex-shrink: 0;
+}
+.badge-gmail  { background: #EA4335; }
+.badge-outlook { background: #0078D4; }
+
 /* ===== Service Page Hero Animation ===== */
 .char-wrap {
     display: inline-block;

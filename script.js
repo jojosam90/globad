@@ -40,3 +40,34 @@ $(function () {
 // WOW animations
 new WOW().init();
 
+// Desktop email choice popup
+$(function () {
+    var emailTo = 'business_contact@globad.net';
+    var $popup = $(
+        '<div class="email-choice-popup">' +
+        '<p>Open with</p>' +
+        '<a href="https://mail.google.com/mail/?view=cm&fs=1&to=' + emailTo + '" target="_blank">' +
+        '<span class="badge badge-gmail">G</span> Gmail</a>' +
+        '<a href="https://outlook.live.com/mail/0/deeplink/compose?to=' + emailTo + '" target="_blank">' +
+        '<span class="badge badge-outlook">O</span> Outlook</a>' +
+        '</div>'
+    ).appendTo('body');
+
+    $(document).on('click', 'a[href^="mailto:"]', function (e) {
+        if ($(window).width() > 768) {
+            e.preventDefault();
+            var rect = this.getBoundingClientRect();
+            $popup.css({
+                top: rect.bottom + window.scrollY + 8,
+                left: Math.min(rect.left, $(window).width() - 220)
+            }).toggle();
+        }
+    });
+
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.email-choice-popup, a[href^="mailto:"]').length) {
+            $popup.hide();
+        }
+    });
+});
+
