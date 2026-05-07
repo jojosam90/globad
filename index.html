@@ -329,7 +329,7 @@
             <p class="wow rotateInUpLeft on-opacity" data-wow-delay=".5s">Connecting brands with audiences worldwide through local media, influencer campaigns, programmatic advertising, and integrated marketing.</p>
             <div class="hero_btns wow rotateInUpLeft" data-wow-delay=".8s">
                 <a href="about.html" class="btn_outline">About Us</a>
-                <a href="javascript:void(0);" class="btn_solid customTalk">Let's Talk</a>
+                <a href="javascript:void(0);" class="btn_solid" id="heroTalkBtn">Let's Talk</a>
             </div>
         </div>
     </div>
@@ -580,6 +580,12 @@ $(function () {
     if ($.fn.select2) {
         $('.talk_pop select').select2({ width: 'auto' });
     }
+});
+
+$(function () {
+    $('#heroTalkBtn').on('click', function () {
+        $(".header .talk").trigger('click');
+    });
 });
 </script>
 
