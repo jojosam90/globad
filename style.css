@@ -121,23 +121,39 @@
 /* ===== Mobile Responsive Fixes ===== */
 @media screen and (max-width: 768px) {
 
-    /* Service page hero — override inline rem-based styles */
+    /* Page hero — override inline rem-based styles (Home, Work, News, Services) */
     main {
-        padding: 80px 20px !important;
-        min-height: 50vh !important;
+        padding: 60px 20px !important;
+        min-height: 40vh !important;
     }
     main h1 {
-        font-size: 36px !important;
-        margin-bottom: 16px !important;
+        font-size: 26px !important;
+        margin-bottom: 12px !important;
         line-height: 1.2 !important;
     }
     main p {
-        font-size: 15px !important;
+        font-size: 14px !important;
         max-width: 100% !important;
         line-height: 1.6 !important;
     }
 
-    /* Mobile header — keep visible with dark bg */
+    /* "Let's Talk" scrolling marquee — reduce from 48px */
+    .letstalk .ab li {
+        font-size: 0.28rem !important;
+    }
+    .letstalk .youwill li {
+        font-size: 0.13rem !important;
+    }
+    .letstalk {
+        padding-top: 0.4rem !important;
+    }
+
+    /* Footer "say hi!" heading */
+    .footer .center h2 {
+        font-size: 0.32rem !important;
+    }
+
+    /* Mobile header — dark bg so white text is visible */
     .wap_header {
         background: rgba(9,6,19,0.92) !important;
     }
