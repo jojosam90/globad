@@ -317,53 +317,7 @@
 <script src="./About-Yeahmobi_files/jquery.SuperSlide.2.1.3.js"></script>
 <script src="./About-Yeahmobi_files/common.js"></script>
 
-<!-- IP check: hides custom chat button for CN/HK/MO/TW visitors -->
-<script>
-var __formApp__ = "/Forms/apply.html";
-var window_w = $(window).width();
-if ((/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent))) {
-    if (window_w > 1201 && window_w < 1441) $(".nav_list").css("padding","0 12.5% 0.1rem");
-    if (window_w > 1440 && window_w < 1700) $(".nav_list").css("padding","0 15% 0.1rem");
-}
-const RETRY_CONFIG = { maxTimes: 3, delay: 1000 };
-async function checkIsChinaIP(retryCount = 0) {
-    try {
-        const ipRes = await fetch("https://manage.yeahmobi.com/waiterapi/pub/getIpAddress");
-        if (!ipRes.ok) {
-            if (retryCount < RETRY_CONFIG.maxTimes) {
-                await new Promise(r => setTimeout(r, RETRY_CONFIG.delay));
-                return checkIsChinaIP(retryCount + 1);
-            }
-            throw new Error("IP check failed");
-        }
-        const data = await ipRes.json();
-        if (data.flag === "success" && ['CN','HK','MO','TW'].includes(data.data.value.countryCode)) {
-            hideChatWidgets();
-        }
-    } catch (e) {
-        if (retryCount < RETRY_CONFIG.maxTimes) {
-            await new Promise(r => setTimeout(r, RETRY_CONFIG.delay));
-            return checkIsChinaIP(retryCount + 1);
-        }
-        hideChatWidgets();
-    }
-}
-function hideChatWidgets() {
-    var el = document.querySelector('.customTalk');
-    if (el) el.style.display = 'none';
-    var obs = new MutationObserver(function(mutations) {
-        mutations.forEach(function(m) {
-            if (m.addedNodes.length) {
-                var t = document.querySelector('.widget-visible');
-                if (t) { t.remove(); obs.disconnect(); }
-            }
-        });
-    });
-    obs.observe(document.body, { childList: true, subtree: true });
-    window.addEventListener('beforeunload', function() { obs.disconnect(); });
-}
-checkIsChinaIP();
-</script>
+
 
 <!-- ===== About Banner ===== -->
 <div class="about_banner rellax" data-rellax-speed="-3">
@@ -758,4 +712,5 @@ $(function () {
 
 </body>
 </html>
+
 
