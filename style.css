@@ -491,6 +491,17 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     cursor: pointer !important;
 }
 
+/* ===== Locations section: align country list to top (removes empty space above) ===== */
+.about_pl5 .pl5_box .pl5_box_tw {
+    align-items: flex-start !important;
+}
+
+/* ===== Footer BRANCHES two-column list ===== */
+.fo_branches_head {
+    margin-top: 0.3rem !important;
+    padding-bottom: 0.06rem !important;
+}
+
 /* ===== Timeline nav arrow buttons ===== */
 .about_pl6 .pl6_box .pl6_box_r .r_left,
 .about_pl6 .pl6_box .pl6_box_r .r_right {
