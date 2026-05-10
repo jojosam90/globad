@@ -2,7 +2,7 @@
 .header .logo img,
 .wap_header .logo img,
 .wap_menulist .logo img {
-    max-height: 36px;
+    max-height: 52px;
     width: auto;
 }
 
@@ -435,6 +435,32 @@
 }
 .badge-gmail  { background: #EA4335; }
 .badge-outlook { background: #0078D4; }
+
+/* ===== Language Toggle Button ===== */
+#lang-toggle {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.5);
+    color: #fff;
+    font-size: 13px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-left: 16px;
+    vertical-align: middle;
+    transition: all 0.2s;
+    letter-spacing: 1px;
+}
+#lang-toggle:hover { background: rgba(255,255,255,0.12); }
+.wap_nav #lang-toggle-mobile {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #fff;
+    font-size: 14px;
+    padding: 6px 16px;
+    cursor: pointer;
+    margin: 12px 0 0 0;
+    display: block;
+    letter-spacing: 1px;
+}
 
 /* ===== Service Page Hero Animation ===== */
 .char-wrap {

@@ -1,12 +1,4 @@
-/* ===== Shared Scripts ===== */
-
-// Mouse follower
-$(function () {
-    $(document).on("mousemove", function (e) {
-        $('.follower').css({ left: e.clientX, top: e.clientY });
-        $('.follower').show();
-    });
-});
+﻿/* ===== Shared Scripts ===== */
 
 // Sticky nav on scroll
 $(function () {
@@ -40,9 +32,30 @@ $(function () {
 // WOW animations
 new WOW().init();
 
+// Language toggle
+$(function () {
+    var lang = localStorage.getItem('globad_lang') || 'en';
+
+    function applyLang(l) {
+        lang = l;
+        localStorage.setItem('globad_lang', l);
+        $('[data-en]').each(function () {
+            var $el = $(this);
+            $el.html(l === 'zh' ? $el.data('zh') : $el.data('en'));
+        });
+        $('#lang-toggle, #lang-toggle-mobile').text(l === 'zh' ? 'EN' : '中文');
+    }
+
+    applyLang(lang);
+
+    $(document).on('click', '#lang-toggle, #lang-toggle-mobile', function () {
+        applyLang(lang === 'zh' ? 'en' : 'zh');
+    });
+});
+
 // Desktop email choice popup
 $(function () {
-    var emailTo = 'business_contact@globad.net';
+    var emailTo = 'Admin@globad.net';
     var $popup = $(
         '<div class="email-choice-popup">' +
         '<p>Open with</p>' +

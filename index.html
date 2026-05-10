@@ -6,8 +6,8 @@
     <link rel="icon" type="image/png" href="logo.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Globad</title>
-    <meta name="description" content="Home">
-    <meta name="keywords" content="Home">
+    <meta name="description" content="About">
+    <meta name="keywords" content="About">
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="./About-Yeahmobi_files/css.css">
@@ -43,23 +43,17 @@
 <div class="header on-opacity fixedNav gizle sabit">
     <div class="center">
         <ul class="nav">
-            <li class="m">
-                <a href="about.html" target="_self" title="About" class="wow rotateInUpLeft" data-wow-duration="1.5s">About</a>
-            </li>
-            <li class="m">
-                <a href="works.html" target="_self" title="Work" class="wow rotateInUpLeft" data-wow-duration="1.6s">Work</a>
+            <li class="m on">
+                <a href="/" target="_self" title="About" class="wow rotateInUpLeft" data-en="About" data-zh="关于我们" data-wow-duration="1.5s">About</a>
             </li>
             <li class="m navon ons">
-                <a href="javascript:void(0);" title="Services" class="wow rotateInUpLeft" data-wow-duration="1.7s">Services</a>
+                <a href="javascript:void(0);" title="Services" class="wow rotateInUpLeft" data-en="Services" data-zh="服务" data-wow-duration="1.6s">Services</a>
                 <ul class="nav_list" style="display:none;">
-                    <li><a href="service-local-media.html" target="_self">Local Media Marketing</a></li>
-                    <li><a href="service-influencer.html" target="_self">Influencer Marketing</a></li>
-                    <li><a href="service-programmatic.html" target="_self">Programmatic Advertising</a></li>
-                    <li><a href="service-integrate.html" target="_self">Integrate Marketing</a></li>
+                    <li><a href="service-local-media.html" target="_self" data-en="Local Media Marketing" data-zh="本地媒体营销">Local Media Marketing</a></li>
+                    <li><a href="service-influencer.html" target="_self" data-en="Influencer Marketing" data-zh="网红营销">Influencer Marketing</a></li>
+                    <li><a href="service-programmatic.html" target="_self" data-en="Programmatic Advertising" data-zh="程序化广告">Programmatic Advertising</a></li>
+                    <li><a href="service-integrate.html" target="_self" data-en="Integrate Marketing" data-zh="整合营销">Integrate Marketing</a></li>
                 </ul>
-            </li>
-            <li class="m">
-                <a href="news.html" target="_self" title="News" class="wow rotateInUpLeft" data-wow-duration="1.8s">News</a>
             </li>
         </ul>
         <div class="logo wow fadeInDown" data-wow-duration="1s">
@@ -67,10 +61,11 @@
             <a href="/" title="logo"><img src="logo.png" alt="Logo"></a>
         </div>
         <div class="navright">
-            <a href="mailto:business_contact@globad.net" target="_blank" title="Email" class="wow rotateInUpLeft" data-wow-duration="1.5s">
+            <a href="mailto:Admin@globad.net" target="_blank" title="Email" class="wow rotateInUpLeft" data-wow-duration="1.5s">
                 <img src="./About-Yeahmobi_files/6454a94ec8e00.png" alt="Email"> Email
             </a>
-            <a class="talk customTalk wow rotateInUpLeft" data-wow-duration="1.6s">Let's talk!</a>
+            <a class="talk customTalk wow rotateInUpLeft" data-wow-duration="1.6s" data-en="Let's talk!" data-zh="联系我们">Let's talk!</a>
+            <button id="lang-toggle">中文</button>
         </div>
     </div>
 </div>
@@ -78,7 +73,7 @@
 <!-- ===== Mobile Header ===== -->
 <div class="wap_header fixedNav">
     <div class="center">
-        <a href="mailto:business_contact@globad.net" target="_blank" class="lin">Email</a>
+        <a href="mailto:Admin@globad.net" target="_blank" class="lin">Email</a>
         <div class="logo">
             <a href="/">
                 <img class="logo1" src="logo.png" alt="">
@@ -95,20 +90,20 @@
         <div class="clear"></div>
         <div class="menulist">
             <ul class="wap_nav">
-                <li class="mm wow fadeInDown" data-wow-duration=".8s" data-wow-delay="0.1s"><a href="/">Home</a></li>
-                <li class="mm wow fadeInDown" data-wow-duration=".8s" data-wow-delay="0.2s"><a href="about.html">About</a></li>
-                <li class="mm wow fadeInDown" data-wow-duration=".8s" data-wow-delay="0.3s"><a href="works.html">Work</a></li>
-                <li class="mm wow fadeInDown" data-wow-duration=".8s" data-wow-delay="0.4s">
-                    <a href="javascript:void(0);">Services</a>
+                <li class="mm wow fadeInDown" data-wow-duration=".8s" data-wow-delay="0.1s"><a href="/" data-en="About" data-zh="关于我们">About</a></li>
+                <li class="mm wow fadeInDown" data-wow-duration=".8s" data-wow-delay="0.2s">
+                    <button id="lang-toggle-mobile">中文</button>
+                </li>
+                <li class="mm wow fadeInDown" data-wow-duration=".8s" data-wow-delay="0.3s">
+                    <a href="javascript:void(0);" data-en="Services" data-zh="服务">Services</a>
                     <ul class="wap_navlist">
-                        <li><a href="service-local-media.html">Local Media Marketing</a></li>
-                        <li><a href="service-influencer.html">Influencer Marketing</a></li>
-                        <li><a href="service-programmatic.html">Programmatic Advertising</a></li>
-                        <li><a href="service-integrate.html">Integrate Marketing</a></li>
+                        <li><a href="service-local-media.html" data-en="Local Media Marketing" data-zh="本地媒体营销">Local Media Marketing</a></li>
+                        <li><a href="service-influencer.html" data-en="Influencer Marketing" data-zh="网红营销">Influencer Marketing</a></li>
+                        <li><a href="service-programmatic.html" data-en="Programmatic Advertising" data-zh="程序化广告">Programmatic Advertising</a></li>
+                        <li><a href="service-integrate.html" data-en="Integrate Marketing" data-zh="整合营销">Integrate Marketing</a></li>
                     </ul>
                     <i class="anniu"></i>
                 </li>
-                <li class="mm wow fadeInDown" data-wow-duration=".8s" data-wow-delay="0.5s"><a href="news.html">News</a></li>
             </ul>
         </div>
         <!-- Scrolling marquee in mobile menu -->
@@ -319,87 +314,63 @@
 
 
 
-<!-- ===== Home Hero ===== -->
+<!-- ===== About Banner ===== -->
 <div class="about_banner rellax" data-rellax-speed="-3">
     <div class="quan1"></div>
     <div class="quan2"></div>
     <div class="center">
-        <div class="home_hero">
-            <h1 class="wow rotateInUpLeft">Your Global<br>Marketing Partner</h1>
-            <p class="wow rotateInUpLeft on-opacity" data-wow-delay=".5s">Connecting brands with audiences worldwide through local media, influencer campaigns, programmatic advertising, and integrated marketing.</p>
-            <div class="hero_btns wow rotateInUpLeft" data-wow-delay=".8s">
-                <a href="about.html" class="btn_outline">About Us</a>
-                <a href="javascript:void(0);" class="btn_solid" id="heroTalkBtn">Let's Talk</a>
+        <div class="about_banner_box">
+            <div class="about_l">
+                <h3 class="wow rotateInUpLeft" data-en="Your global partner for integrated digital marketing and performance advertising." data-zh="您的全球整合数字营销与绩效广告专属伙伴。">Your global partner for integrated digital marketing and performance advertising.</h3>
+                <p class="wow rotateInUpLeft on-opacity" data-wow-delay=".5s" data-en="GlobAd helps brands reach the right audiences worldwide through data-driven media strategies and cross-platform campaigns." data-zh="GlobAd 通过数据驱动的媒体策略和跨平台推广，助力品牌触达全球目标受众。">GlobAd helps brands reach the right audiences worldwide through data-driven media strategies and cross-platform campaigns.</p>
+            </div>
+            <div class="about_r">
+                <div class="viedo_box">
+                    <div class="over_video">
+                        <video id="video" muted loop poster="/Uploads/block/20230421/644232117bcd4.jpg" src="/Uploads/block/20230426/6448d925b1932.mp4"></video>
+                    </div>
+                    <div class="tp_box">
+                        <img class="suiji" src="./About-Yeahmobi_files/365_384_200_0.jpeg" alt="">
+                        <span class="on-opacity">/ About</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- ===== Services Overview ===== -->
-<div class="home_services">
+<!-- ===== We Have / We Can Provide ===== -->
+<div class="about_pl2">
     <div class="center">
-        <h2 class="wow rotateInUpLeft on-opacity">/ OUR SERVICES</h2>
-        <div class="services_grid">
-            <a href="service-local-media.html" class="service_card wow fadeInUp" data-wow-delay=".1s">
-                <div class="svc_num">01</div>
-                <h3>Local Media Marketing</h3>
-                <p>Reach local audiences through OOH, DOOH, TV, radio, and offline events tailored to each market.</p>
-                <span class="svc_arrow">→</span>
-            </a>
-            <a href="service-influencer.html" class="service_card wow fadeInUp" data-wow-delay=".2s">
-                <div class="svc_num">02</div>
-                <h3>Influencer Marketing</h3>
-                <p>Amplify your brand with top creators across YouTube, Instagram, TikTok and more.</p>
-                <span class="svc_arrow">→</span>
-            </a>
-            <a href="service-programmatic.html" class="service_card wow fadeInUp" data-wow-delay=".3s">
-                <div class="svc_num">03</div>
-                <h3>Programmatic Advertising</h3>
-                <p>Data-driven precision targeting across mobile, display, and video at global scale.</p>
-                <span class="svc_arrow">→</span>
-            </a>
-            <a href="service-integrate.html" class="service_card wow fadeInUp" data-wow-delay=".4s">
-                <div class="svc_num">04</div>
-                <h3>Integrate Marketing</h3>
-                <p>Unified cross-channel campaigns that align your brand message across every touchpoint.</p>
-                <span class="svc_arrow">→</span>
-            </a>
+        <div class="pl2_box">
+            <div class="pl2_box_t">
+                <h2 class="wow rotateInUpLeft on-opacity" data-en="/ WE HAVE：" data-zh="/ 我们的优势：">/ WE HAVE：</h2>
+                <h3 class="wow rotateInUpLeft on-opacity" data-en="- Regional Market Expertise." data-zh="- 深厚的区域市场专业知识。"><span>-</span> Regional Market Expertise.</h3>
+                <h3 class="wow rotateInUpLeft on-opacity" data-en="- Performance-Driven Advertising Technology." data-zh="- 以效果为导向的广告技术。"><span>-</span> Performance-Driven Advertising Technology.</h3>
+                <h3 class="wow rotateInUpLeft on-opacity" data-en="- Full-Funnel Campaign Management." data-zh="- 全漏斗营销活动管理。"><span>-</span> Full-Funnel Campaign Management.</h3>
+                <p class="wow rotateInUpLeft on-opacity" data-en="Backed by deep regional insights and an intelligent ad platform, we craft strategies that deliver measurable results." data-zh="凭借深度的区域市场洞察与智能广告平台，我们为您制定可量化的营销策略。">Backed by deep regional insights and an intelligent ad platform, we craft strategies that deliver measurable results.</p>
+            </div>
+            <div class="pl2_box_t pl2_box_b">
+                <h2 class="wow rotateInUpLeft on-opacity" data-en="/ WE CAN PROVIDE：" data-zh="/ 我们能提供：">/ WE CAN PROVIDE：</h2>
+                <h3 class="wow rotateInUpLeft on-opacity" data-en="- Wider Reach Across Key Markets." data-zh="- 覆盖更广泛的核心市场。"><span>-</span> Wider Reach Across Key Markets.</h3>
+                <h3 class="wow rotateInUpLeft on-opacity" data-en="- More Targeted and Cost-Efficient Campaigns." data-zh="- 更精准、更高效益的营销推广。"><span>-</span> More Targeted and Cost-Efficient Campaigns.</h3>
+                <h3 class="wow rotateInUpLeft on-opacity" data-en="- Higher Return on Your Advertising Investment." data-zh="- 更高的广告投资回报率。"><span>-</span> Higher Return on Your Advertising Investment.</h3>
+                <p class="wow rotateInUpLeft on-opacity" data-en="We help brands achieve sustainable growth through campaigns that scale efficiently across platforms and regions." data-zh="我们助力品牌通过跨平台、跨地区的高效推广实现持续增长。">We help brands achieve sustainable growth through campaigns that scale efficiently across platforms and regions.</p>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- ===== Stats ===== -->
-<div class="about_pl4">
-    <div class="center">
-        <div class="pl4_box">
-            <ul>
-                <li>
-                    <h3 class="wow rotateInUpLeft">5000+</h3>
-                    <p class="wow rotateInUpLeft on-opacity">Global Advertisers</p>
-                </li>
-                <li>
-                    <h3 class="wow rotateInUpLeft">200+</h3>
-                    <p class="wow rotateInUpLeft on-opacity">Coverage Countries / Regions</p>
-                </li>
-                <li>
-                    <h3 class="wow rotateInUpLeft">7 Billion+</h3>
-                    <p class="wow rotateInUpLeft on-opacity">Standalone Devices</p>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<!-- ===== Partner Logos ===== -->
+<!-- ===== Meet Our Friends ===== -->
 <div class="about_pl3">
     <div class="center">
         <div class="pl3_box">
             <div class="pl3_box_t">
                 <div class="pl3_box_t_l">
-                    <h3 class="wow rotateInUpLeft">MEET OUR<br>FRIENDS</h3>
+                    <h3 class="wow rotateInUpLeft" data-en="MEET OUR PARTNERS" data-zh="我们的合作伙伴">MEET OUR<br>PARTNERS</h3>
                 </div>
                 <div class="pl3_box_t_r wow rotateInUpLeft">
-                    <p class="on-opacity">We have helped more than 5,000 enterprises reach overseas users efficiently. Our clients include Huawei, Alibaba, Tencent, Netease, ByteDance, Baidu, Kwai, iQiyi, SHEIN, Lazada, and more.</p>
+                    <p class="on-opacity" data-en="We have helped more than 1,000 enterprises reach overseas users efficiently, and applied our complete going-global service system to fulfill the differentiated needs of advertisers across ecommerce platforms including Amazon, SHEIN, Alibaba, Tencent, Lazada, Facebook, TikTok, and more." data-zh="我们已协助逾1,000家企业高效触达海外用户，并通过完善的出海服务体系，满足在亚马逊、SHEIN、阿里巴巴、腾讯、来赞达、Facebook、TikTok等电商平台上不同类型广告主的差异化需求。">We have helped more than 1,000 enterprises reach overseas users efficiently, and applied our complete going-global service system to fulfill the differentiated needs of advertisers across ecommerce platforms including Amazon, SHEIN, Alibaba, Tencent, Lazada, Facebook, TikTok, and more.</p>
                 </div>
             </div>
         </div>
@@ -422,6 +393,79 @@
     </div>
 </div>
 
+<!-- ===== Stats ===== -->
+<div class="about_pl4">
+    <div class="center">
+        <div class="pl4_box">
+            <ul>
+                <li>
+                    <h3 class="wow rotateInUpLeft">1,000+</h3>
+                    <p class="wow rotateInUpLeft on-opacity" data-en="Enterprise Partners" data-zh="企业合作伙伴">Enterprise Partners</p>
+                </li>
+                <li>
+                    <h3 class="wow rotateInUpLeft">30+</h3>
+                    <p class="wow rotateInUpLeft on-opacity" data-en="Coverage Markets" data-zh="覆盖市场">Coverage Markets</p>
+                </li>
+                <li>
+                    <h3 class="wow rotateInUpLeft">4</h3>
+                    <p class="wow rotateInUpLeft on-opacity" data-en="Core Marketing Services" data-zh="核心营销服务">Core Marketing Services</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- ===== Locations ===== -->
+<div class="about_pl5">
+    <div class="quan1"></div>
+    <div class="quan2"></div>
+    <div class="center">
+        <div class="pl5_box">
+            <p class="wow rotateInUpLeft" data-en="The growth happens when we work together across borders and time zones." data-zh="跨越国界与时区，共同创造增长。">The growth happens when we work together across borders and time zones.</p>
+            <h3 class="wow rotateInUpLeft" data-en="LOCATIONS" data-zh="办公地点">LOCATIONS</h3>
+            <div class="pl5_box_tw">
+                <div class="tw_l">
+                    <ul>
+                        <li data-jl="1" class="h1 txt_1 wow rotateInUpLeft on-opacity" data-letters="| Malaysia" data-en="| Malaysia" data-zh="| 马来西亚">| Malaysia</li>
+                        <li data-jl="2" class="h2 txt_2 wow rotateInUpLeft on-opacity" data-letters="| Singapore" data-en="| Singapore" data-zh="| 新加坡">| Singapore</li>
+                        <li data-jl="3" class="h3 txt_3 wow rotateInUpLeft on-opacity" data-letters="| China" data-en="| China" data-zh="| 中国">| China</li>
+                    </ul>
+                </div>
+                <div class="tw_r">
+                    <div id="pictures">
+                        <img data-id="1" class="tu1" src="./About-Yeahmobi_files/51_531_605_0.jpeg" alt="Malaysia" style="z-index:10;top:50%;left:50%;">
+                        <img data-id="2" class="tu2" src="./About-Yeahmobi_files/47_531_605_0.jpeg" alt="Singapore" style="z-index:1;top:50%;left:50%;">
+                        <img data-id="3" class="tu3" src="./About-Yeahmobi_files/55_531_605_0.jpeg" alt="China" style="z-index:2;top:50%;left:50%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== Growth Road ===== -->
+<div class="about_pl6">
+    <div class="center">
+        <div class="pl6_box">
+            <div class="pl6_box_l">
+                <p class="wow rotateInUpLeft on-opacity" data-en="Our journey is the sea of stars." data-zh="我们的旅程，星辰大海。">Our journey is the sea of stars.</p>
+                <h3 class="wow rotateInUpLeft" data-en="Growth Road" data-zh="发展历程">Growth Road</h3>
+            </div>
+            <div class="pl6_box_r">
+                <div class="r_left prev"></div>
+                <div class="r_right next"></div>
+            </div>
+        </div>
+        <div class="pl6_lun swiper" id="mySwiper3">
+            <ul class="swiper-wrapper on-drag">
+                <li class="swiper-slide" data-key="2025"><div class="road_box"><p data-en="Expanded cross-platform partnerships with TikTok, Facebook, Amazon, and Lazada" data-zh="深化与TikTok、Facebook、亚马逊、来赞达等平台的跨平台合作">Expanded cross-platform partnerships with TikTok, Facebook, Amazon, and Lazada</p><p data-en="Grew active enterprise client base to over 1,000 partners across Southeast Asia and beyond" data-zh="企业客户规模突破1,000家，覆盖东南亚及更广泛市场">Grew active enterprise client base to over 1,000 partners across Southeast Asia and beyond</p><p data-en="Launched enhanced programmatic advertising capabilities" data-zh="推出升级版程序化广告能力">Launched enhanced programmatic advertising capabilities</p></div><h2>2025</h2></li>
+                <li class="swiper-slide" data-key="2024"><div class="road_box"><p data-en="Strengthened influencer marketing division across key ASEAN markets" data-zh="强化东南亚核心市场的网红营销业务">Strengthened influencer marketing division across key ASEAN markets</p><p data-en="Deepened ecommerce advertising services on SHEIN, Alibaba, and Tencent platforms" data-zh="深化在SHEIN、阿里巴巴、腾讯平台上的电商广告服务">Deepened ecommerce advertising services on SHEIN, Alibaba, and Tencent platforms</p><p data-en="Expanded regional operations and campaign delivery teams" data-zh="扩展区域运营与营销推广团队">Expanded regional operations and campaign delivery teams</p></div><h2>2024</h2></li>
+                <li class="swiper-slide" data-key="2023"><div class="road_box"><p data-en="GlobAd established with headquarters in Kuala Lumpur, Malaysia" data-zh="GlobAd于马来西亚吉隆坡正式成立">GlobAd established with headquarters in Kuala Lumpur, Malaysia</p><p data-en="Opened regional offices in Singapore and China" data-zh="在新加坡与中国开设区域办事处">Opened regional offices in Singapore and China</p><p data-en="Launched integrated digital marketing services for brands going global" data-zh="推出面向出海品牌的整合数字营销服务">Launched integrated digital marketing services for brands going global</p></div><h2>2023</h2></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 <!-- ===== Let's Talk Banner ===== -->
 <div class="letstalk on-letstalk wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" onclick="track(2)">
     <div class="a">
@@ -440,11 +484,11 @@
     </div>
     <div class="youwill">
         <ul>
-            <li>Start a wonderful journey of growth with us.</li>
-            <li>Start a wonderful journey of growth with us.</li>
-            <li>Start a wonderful journey of growth with us.</li>
-            <li>Start a wonderful journey of growth with us.</li>
-            <li>Start a wonderful journey of growth with us.</li>
+            <li data-en="Start a wonderful journey of growth with us." data-zh="与我们一起，开启精彩的增长之旅。">Start a wonderful journey of growth with us.</li>
+            <li data-en="Start a wonderful journey of growth with us." data-zh="与我们一起，开启精彩的增长之旅。">Start a wonderful journey of growth with us.</li>
+            <li data-en="Start a wonderful journey of growth with us." data-zh="与我们一起，开启精彩的增长之旅。">Start a wonderful journey of growth with us.</li>
+            <li data-en="Start a wonderful journey of growth with us." data-zh="与我们一起，开启精彩的增长之旅。">Start a wonderful journey of growth with us.</li>
+            <li data-en="Start a wonderful journey of growth with us." data-zh="与我们一起，开启精彩的增长之旅。">Start a wonderful journey of growth with us.</li>
         </ul>
     </div>
 </div>
@@ -453,7 +497,7 @@
 <div class="footer on-opacity">
     <div class="center">
         <div class="footer_left">
-            <h2>say hi!</h2>
+            <h2 data-en="say hi!" data-zh="联系我们">say hi!</h2>
             <a href="https://www.linkedin.com/company/yeahmobi/" target="_blank" class="pic">
                 <img alt="Linkedin" src="./About-Yeahmobi_files/6446326e65610.png">
             </a>
@@ -475,30 +519,33 @@
         <div class="footer_right">
             <div class="fo_list1">
                 <ul>
-                    <p>SITEMAP</p>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="works.html">Work</a></li>
+                    <p data-en="SITEMAP" data-zh="网站地图">SITEMAP</p>
+                    <li><a href="/" data-en="About" data-zh="关于我们">About</a></li>
                     <li><a href="service-local-media.html">Services</a></li>
-                    <li><a href="news.html">News</a></li>
                 </ul>
             </div>
             <div class="fo_list2">
-                <p>BRANCHES</p>
-                <ul><li>Singapore</li><li>USA</li><li>India</li><li>Indonesia</li><li>UAE</li><li>Germany</li><li>Japan</li></ul>
-                <ul><li>Korea</li><li>China</li><li>Spain</li></ul>
+                <p data-en="OFFICES" data-zh="办公地点">OFFICES</p>
+                <ul><li>Malaysia</li><li>Singapore</li><li>China</li></ul>
             </div>
             <div class="fo_list3">
                 <ul>
-                    <p>NEW BUSINESS</p>
-                    <li><a href="mailto:business_contact@globad.net">business_contact@globad.net</a></li>
+                    <p data-en="NEW BUSINESS" data-zh="业务合作">NEW BUSINESS</p>
+                    <li><a href="mailto:Admin@globad.net">Admin@globad.net</a></li>
                 </ul>
                 <ul>
-                    <p>SERVICES</p>
-                    <li><a href="service-local-media.html">Local Media Marketing</a></li>
-                    <li><a href="service-influencer.html">Influencer Marketing</a></li>
-                    <li><a href="service-programmatic.html">Programmatic Advertising</a></li>
-                    <li><a href="service-integrate.html">Integrate Marketing</a></li>
+                    <p data-en="MALAYSIA HQ" data-zh="马来西亚总部">MALAYSIA HQ</p>
+                    <li>Unit 10-02, Vida Bukit Ceylon</li>
+                    <li>No. 1D, Jalan Ceylon</li>
+                    <li>50200 Kuala Lumpur</li>
+                    <li>W.P. Kuala Lumpur, Malaysia</li>
+                </ul>
+                <ul>
+                    <p data-en="SERVICES" data-zh="服务项目">SERVICES</p>
+                    <li><a href="service-local-media.html" data-en="Local Media Marketing" data-zh="本地媒体营销">Local Media Marketing</a></li>
+                    <li><a href="service-influencer.html" data-en="Influencer Marketing" data-zh="网红营销">Influencer Marketing</a></li>
+                    <li><a href="service-programmatic.html" data-en="Programmatic Advertising" data-zh="程序化广告">Programmatic Advertising</a></li>
+                    <li><a href="service-integrate.html" data-en="Integrate Marketing" data-zh="整合营销">Integrate Marketing</a></li>
                 </ul>
             </div>
         </div>
@@ -507,26 +554,10 @@
             <div class="left">
                 <!-- Update company name -->
                 <p>GlobAd Sdn Bhd</p>
-                <a href="privacy.html">Privacy</a>
+                <a href="privacy.html" data-en="Privacy" data-zh="隐私政策">Privacy</a>
             </div>
             <div class="gotop">back to top</div>
         </div>
-    </div>
-</div>
-
-<!-- ===== Mouse Cursor Follower ===== -->
-<div class="mouse">
-    <div class="cursor"></div>
-    <div class="follower">
-        <span>
-            <div class="prev"></div>
-            <div class="next"></div>
-            <div class="click">Click</div>
-            <div class="open">Open</div>
-            <div class="drag" style="display:none;">Drag</div>
-            <div class="learnmore">Learn <br> More</div>
-            <div class="lettalk" style="display:none;">Let's <br> Talk</div>
-        </span>
     </div>
 </div>
 
@@ -551,18 +582,21 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 <script src="./About-Yeahmobi_files/global.js"></script>
 <script src="script.js"></script>
 
-<!-- ===== Home Page: Swiper + Init ===== -->
+<!-- ===== About Page: Swiper + Animations ===== -->
 <script>
 $(function () {
     var _width = $(window).width();
     if (_width > 1024) {
+        var videoEl = document.getElementById("video");
+        if (videoEl) videoEl.play();
         new Rellax('.rellax');
         new Swiper('#mySwiper2', {
             slidesPerView: 4,
             slidesPerColumn: 3,
             slidesPerColumnFill: "column",
             speed: 1000,
-            autoplay: { delay: 1000, stopOnLastSlide: false, disableOnInteraction: true }
+            autoplay: { delay: 1000, stopOnLastSlide: false, disableOnInteraction: true },
+            on: { touchMove: function(swiper, e) { $('.follower').css({ left: swiper.clientX, top: swiper.clientY }).show(); } }
         });
     } else {
         $(".quan1, .quan2").css("display", "none");
@@ -576,22 +610,69 @@ $(function () {
     }
 });
 
+new Swiper("#mySwiper3", {
+    spaceBetween: 0,
+    slidesPerView: "auto",
+    navigation: { nextEl: ".next", prevEl: ".prev" },
+    on: { touchMove: function(swiper, e) { $('.follower').css({ left: swiper.clientX, top: swiper.clientY }).show(); } }
+});
+
+if (/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent)) {
+    $(".quan1, .quan2").css("display", "none");
+}
+
+// Location photo z-index cycling animation
+$(document).ready(function () {
+    var z = 0, inAnimation = false;
+    $('#pictures img').each(function () { z++; $(this).css('z-index', z); });
+
+    function swapFirstLast() {
+        if (inAnimation) return;
+        inAnimation = true;
+        var top = z, bot = 1;
+        $('#pictures img').each(function () {
+            var cur = parseInt($(this).css('z-index'));
+            if (cur === top) {
+                $(this).animate({}, 'slow', function () {
+                    $(this).css('z-index', bot).animate({ 'left': '50%' }, 'slow', function () { inAnimation = false; });
+                });
+            } else {
+                $(this).animate({ 'top': '50%' }, 'slow', function () {
+                    $(this).css('z-index', cur + 1);
+                });
+            }
+        });
+    }
+
+    var ding = setInterval(swapFirstLast, 1000);
+    $(".tw_r").mouseover(function () { clearInterval(ding); });
+    $(".tw_r").mouseout(function () { ding = setInterval(swapFirstLast, 1000); });
+
+    // Group location list items into sub-lists
+    var _len = 5;
+    $(".tw_l > ul > li").each(function (i) {
+        $(".tw_l > ul > li").slice(i * _len, i * _len + _len).wrapAll("<ul></ul>");
+    });
+
+    // Random hero image
+    var imgList = [
+        "./About-Yeahmobi_files/365_384_200_0.jpeg",
+        "./About-Yeahmobi_files/365_384_200_0.jpeg",
+        "./About-Yeahmobi_files/365_384_200_0.jpeg"
+    ];
+    $(".suiji").attr("src", imgList[Math.floor(Math.random() * imgList.length)]);
+});
+
+// Init select2 on all selects inside popup
 $(function () {
     if ($.fn.select2) {
         $('.talk_pop select').select2({ width: 'auto' });
     }
 });
-
-$(function () {
-    $('#heroTalkBtn').on('click', function () {
-        $(".header .talk").trigger('click');
-    });
-});
 </script>
 
 </body>
 </html>
-
 
 
 
