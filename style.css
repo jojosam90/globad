@@ -469,7 +469,7 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     line-height: 34px;
     text-align: center;
     margin-left: 18px;
-    vertical-align: -50px;
+    align-self: center;
     letter-spacing: 0.5px;
     transition: opacity 0.2s;
     display: inline-block;
