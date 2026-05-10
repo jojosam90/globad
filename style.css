@@ -493,9 +493,18 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     cursor: pointer !important;
 }
 
-/* ===== Locations section: align country list to top (removes empty space above) ===== */
+/* ===== Locations section: heading + list share the left flex column ===== */
 .about_pl5 .pl5_box .pl5_box_tw {
     align-items: flex-start !important;
+}
+.about_pl5 .pl5_box .pl5_box_tw .tw_l {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+}
+.about_pl5 .pl5_box .pl5_box_tw .tw_l p,
+.about_pl5 .pl5_box .pl5_box_tw .tw_l h3 {
+    width: 100% !important;
 }
 
 
