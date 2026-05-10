@@ -136,20 +136,6 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     flex-shrink: 0;
 }
 
-/* ===== Footer: tighten gap between column headings and their items ===== */
-.footer .center .footer_right .fo_list1 ul p,
-.footer .center .footer_right .fo_list2 > p {
-    padding-bottom: 0.02rem !important;
-    margin-bottom: 0 !important;
-}
-.footer .center .footer_right .fo_list2 > ul {
-    margin-top: 0.04rem !important;
-}
-.footer .center .footer_right .fo_list1 ul li:first-child,
-.footer .center .footer_right .fo_list2 ul li:first-child {
-    margin-top: 0 !important;
-}
-
 /* ===== Footer OFFICES column ===== */
 .footer .center .footer_right .fo_list2 {
     align-self: flex-start !important;
@@ -192,6 +178,20 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     /* Footer "say hi!" heading */
     .footer .center h2 {
         font-size: 0.32rem !important;
+    }
+
+    /* Footer: heading sits directly above its items — no extra gap */
+    .footer .center .footer_right .fo_list1 ul p,
+    .footer .center .footer_right .fo_list2 > p {
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .footer .center .footer_right .fo_list2 > ul {
+        margin-top: 0 !important;
+    }
+    .footer .center .footer_right .fo_list1 ul li:first-child,
+    .footer .center .footer_right .fo_list2 ul li:first-child {
+        margin-top: 0.05rem !important;
     }
 
     /* Mobile header — dark bg so white text is visible */
