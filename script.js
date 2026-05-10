@@ -44,12 +44,14 @@ $(function () {
             var text = l === 'zh' ? this.getAttribute('data-zh') : this.getAttribute('data-en');
             if (text != null) { $(this).html(text); }
         });
-        // Marquee clones (created by the plugin at init) have no data-en/zh,
-        // so update every li inside .picMarquee-left directly
-        var marqueeText = l === 'zh'
-            ? '联系我们！&nbsp;&nbsp;联系我们！&nbsp;&nbsp;联系我们！&nbsp;&nbsp;'
-            : "let's talk! &nbsp;let's talk! &nbsp;let's talk! &nbsp;";
-        $('.picMarquee-left li').html(marqueeText);
+        // Marquee: reset UL html then reinitialise SuperSlide so it recalculates widths
+        var marqueeZh = '<li>联系我们！&nbsp;&nbsp;&nbsp;联系我们！&nbsp;&nbsp;&nbsp;联系我们！&nbsp;&nbsp;&nbsp;</li>';
+        var marqueeEn = "<li>let's talk! &nbsp;let's talk! &nbsp;let's talk! &nbsp;</li>";
+        var marqueeItem = l === 'zh' ? marqueeZh : marqueeEn;
+        $('.wap_menulist .picMarquee-left .bd ul').html(marqueeItem + marqueeItem + marqueeItem);
+        jQuery('.wap_menulist .picMarquee-left').slide({mainCell:'.bd ul', autoPlay:true, effect:'leftMarquee', vis:2, interTime:30, pnLoop:false});
+        $('.talk_pop .picMarquee-left .bd ul').html(marqueeItem + marqueeItem + marqueeItem);
+        jQuery('.talk_pop .picMarquee-left').slide({mainCell:'.bd ul', autoPlay:true, effect:'leftMarquee', vis:3, interTime:30, pnLoop:false});
         // Non-default options (e.g. multi-select items): simple text update is enough
         $('option[data-en]').each(function () {
             if (this.value === '') return;
