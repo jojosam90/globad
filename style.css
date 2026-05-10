@@ -1,3 +1,7 @@
+/* ===== Restore cursor hidden by vendor CSS (cursor: none !important on *) ===== */
+* { cursor: auto !important; }
+a, button, [onclick], label, input, select, textarea, summary { cursor: pointer !important; }
+
 /* ===== Logo Size ===== */
 .header .logo img,
 .wap_header .logo img,
@@ -438,28 +442,34 @@
 
 /* ===== Language Toggle Button ===== */
 #lang-toggle {
-    background: none;
-    border: 1px solid rgba(255,255,255,0.5);
-    color: #fff;
-    font-size: 13px;
-    padding: 4px 12px;
-    cursor: pointer;
-    margin-left: 16px;
+    background: #ffffff;
+    color: #090613;
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 16px;
+    margin-left: 18px;
     vertical-align: middle;
-    transition: all 0.2s;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s;
+    display: inline-block;
+    line-height: 1.6;
+    cursor: pointer !important;
 }
-#lang-toggle:hover { background: rgba(255,255,255,0.12); }
-.wap_nav #lang-toggle-mobile {
-    background: none;
-    border: 1px solid rgba(255,255,255,0.4);
+#lang-toggle:hover { opacity: 0.82; }
+#lang-toggle-mobile {
+    background: rgba(255,255,255,0.15);
     color: #fff;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
     font-size: 14px;
-    padding: 6px 16px;
-    cursor: pointer;
-    margin: 12px 0 0 0;
-    display: block;
-    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 7px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    letter-spacing: 0.5px;
+    cursor: pointer !important;
 }
 
 /* ===== Service Page Hero Animation ===== */
