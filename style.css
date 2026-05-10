@@ -236,6 +236,9 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
 .wap_menulist .picMarquee-left::after {
     display: none !important;
 }
+.picMarquee-left .bd ul li {
+    white-space: nowrap !important;
+}
 
 /* ===== Fix: location list items must not word-wrap ===== */
 .about_pl5 .tw_l li {
