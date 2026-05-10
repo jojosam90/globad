@@ -44,6 +44,12 @@ $(function () {
             var text = l === 'zh' ? this.getAttribute('data-zh') : this.getAttribute('data-en');
             if (text != null) { $(this).html(text); }
         });
+        // Marquee clones (created by the plugin at init) have no data-en/zh,
+        // so update every li inside .picMarquee-left directly
+        var marqueeText = l === 'zh'
+            ? '联系我们！&nbsp;&nbsp;联系我们！&nbsp;&nbsp;联系我们！&nbsp;&nbsp;'
+            : "let's talk! &nbsp;let's talk! &nbsp;let's talk! &nbsp;";
+        $('.picMarquee-left li').html(marqueeText);
         // Non-default options (e.g. multi-select items): simple text update is enough
         $('option[data-en]').each(function () {
             if (this.value === '') return;
