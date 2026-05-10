@@ -488,13 +488,20 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
 }
 
 /* ===== Timeline nav arrow buttons ===== */
-.about_pl6 .pl6_box .pl6_box_r .prev {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23090613' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='19' y1='12' x2='5' y2='12'/%3E%3Cpolyline points='12 19 5 12 12 5'/%3E%3C/svg%3E") !important;
-    background-repeat: no-repeat !important;
+.about_pl6 .pl6_box .pl6_box_r .r_left,
+.about_pl6 .pl6_box .pl6_box_r .r_right {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-image: none !important;
 }
-.about_pl6 .pl6_box .pl6_box_r .next {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23090613' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='12 5 19 12 12 19'/%3E%3C/svg%3E") !important;
-    background-repeat: no-repeat !important;
+.about_pl6 .pl6_box .pl6_box_r .r_left svg,
+.about_pl6 .pl6_box .pl6_box_r .r_right svg {
+    width: 20px;
+    height: 20px;
+    color: #090613;
+    display: block;
+    flex-shrink: 0;
 }
 .about_pl6 .pl6_box .pl6_box_r .prev.swiper-button-disabled,
 .about_pl6 .pl6_box .pl6_box_r .next.swiper-button-disabled {
