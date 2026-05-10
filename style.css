@@ -463,7 +463,9 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     border-radius: 4px;
     font-size: 12px;
     font-weight: 700;
-    padding: 3px 14px;
+    padding: 1px 0;
+    width: 42px;
+    text-align: center;
     margin-left: 18px;
     vertical-align: middle;
     letter-spacing: 0.5px;
