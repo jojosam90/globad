@@ -39,17 +39,47 @@ $(function () {
     function applyLang(l) {
         lang = l;
         localStorage.setItem('globad_lang', l);
-        $('[data-en]').each(function () {
-            var $el = $(this);
-            $el.html(l === 'zh' ? $el.data('zh') : $el.data('en'));
+        // Swap all non-option translatable elements
+        $('[data-en]').not('option').each(function () {
+            var text = l === 'zh' ? this.getAttribute('data-zh') : this.getAttribute('data-en');
+            if (text != null) { $(this).html(text); }
         });
+        // Non-default options (e.g. multi-select items): simple text update is enough
+        $('option[data-en]').each(function () {
+            if (this.value === '') return;
+            var text = l === 'zh' ? this.getAttribute('data-zh') : this.getAttribute('data-en');
+            if (text != null) { this.text = text; }
+        });
+        // Default "Please select" options: browser caches the selected option's display text,
+        // so we must remove + re-insert the element to force a redraw
+        $('select').each(function () {
+            var sel = this;
+            var optIdx = -1;
+            for (var i = 0; i < sel.options.length; i++) {
+                if (sel.options[i].value === '' && sel.options[i].getAttribute('data-en')) {
+                    optIdx = i; break;
+                }
+            }
+            if (optIdx === -1) return;
+            var opt     = sel.options[optIdx];
+            var dataEn  = opt.getAttribute('data-en');
+            var dataZh  = opt.getAttribute('data-zh');
+            var text    = l === 'zh' ? dataZh : dataEn;
+            var wasSelected = (sel.selectedIndex === optIdx);
+            sel.remove(optIdx);
+            var newOpt = new Option(text, '');
+            newOpt.setAttribute('data-en', dataEn);
+            newOpt.setAttribute('data-zh', dataZh);
+            sel.insertBefore(newOpt, sel.options[optIdx] || null);
+            if (wasSelected) sel.selectedIndex = optIdx;
+        });
+        // Swap input placeholders
         $('[data-ph-en]').each(function () {
-            var $el = $(this);
-            $el.attr('placeholder', l === 'zh' ? $el.data('ph-zh') : $el.data('ph-en'));
+            this.placeholder = l === 'zh' ? this.getAttribute('data-ph-zh') : this.getAttribute('data-ph-en');
         });
+        // Swap submit button values
         $('[data-val-en]').each(function () {
-            var $el = $(this);
-            $el.val(l === 'zh' ? $el.data('val-zh') : $el.data('val-en'));
+            this.value = l === 'zh' ? this.getAttribute('data-val-zh') : this.getAttribute('data-val-en');
         });
         $('#lang-toggle, #lang-toggle-mobile').text(l === 'zh' ? 'EN' : '中文');
     }
