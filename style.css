@@ -507,6 +507,44 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     margin-top: 0.4rem;
 }
 
+/* ===== Location photo wrappers ===== */
+#pictures .pic-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    max-width: 93%;
+    transform: translate(-50%, -50%);
+}
+/* Malaysia (first) gets full width — visibly enlarged vs the others */
+#pictures .pic-wrap:first-child {
+    max-width: 100%;
+}
+/* Reset positioning on the img itself — the wrapper handles it */
+#pictures .pic-wrap img {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+    display: block;
+}
+/* "Malaysia" text overlay — matches style of baked-in text in other location images */
+#pictures .pic-label {
+    position: absolute;
+    top: 0.14rem;
+    left: 0.14rem;
+    font-size: 0.48rem;
+    font-weight: 300;
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 2px;
+    line-height: 1;
+    pointer-events: none;
+}
+
 /* ===== Locations section: heading + list share the left flex column ===== */
 .about_pl5 .pl5_box .pl5_box_tw {
     align-items: flex-start !important;

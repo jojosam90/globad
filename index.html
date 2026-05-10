@@ -435,9 +435,16 @@
                 </div>
                 <div class="tw_r">
                     <div id="pictures">
-                        <img data-id="1" class="tu1" src="./malaysia.jpeg" alt="Malaysia" style="z-index:10;top:50%;left:50%;">
-                        <img data-id="2" class="tu2" src="./About-Yeahmobi_files/47_531_605_0.jpeg" alt="Singapore" style="z-index:1;top:50%;left:50%;">
-                        <img data-id="3" class="tu3" src="./About-Yeahmobi_files/55_531_605_0.jpeg" alt="China" style="z-index:2;top:50%;left:50%;">
+                        <div class="pic-wrap tu1" data-id="1" style="z-index:10;top:50%;left:50%;">
+                            <img src="./malaysia.jpeg" alt="Malaysia">
+                            <span class="pic-label">Malaysia</span>
+                        </div>
+                        <div class="pic-wrap tu2" data-id="2" style="z-index:1;top:50%;left:50%;">
+                            <img src="./About-Yeahmobi_files/47_531_605_0.jpeg" alt="Singapore">
+                        </div>
+                        <div class="pic-wrap tu3" data-id="3" style="z-index:2;top:50%;left:50%;">
+                            <img src="./About-Yeahmobi_files/55_531_605_0.jpeg" alt="China">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -626,13 +633,13 @@ if (/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent)) {
 // Location photo z-index cycling animation
 $(document).ready(function () {
     var z = 0, inAnimation = false;
-    $('#pictures img').each(function () { z++; $(this).css('z-index', z); });
+    $('#pictures .pic-wrap').each(function () { z++; $(this).css('z-index', z); });
 
     function swapFirstLast() {
         if (inAnimation) return;
         inAnimation = true;
         var top = z, bot = 1;
-        $('#pictures img').each(function () {
+        $('#pictures .pic-wrap').each(function () {
             var cur = parseInt($(this).css('z-index'));
             if (cur === top) {
                 $(this).animate({}, 'slow', function () {
