@@ -10,6 +10,11 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     width: auto;
 }
 
+/* ===== Logo vertical position: shift up slightly ===== */
+.header .logo {
+    top: 30% !important;
+}
+
 /* ===== Shared Header / Nav Styles ===== */
 .header {
     z-index: 99;
