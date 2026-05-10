@@ -83,29 +83,13 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     margin-right: auto !important;
 }
 
-/* ===== Footer Branches Columns ===== */
+/* ===== Footer OFFICES column ===== */
 .footer .center .footer_right .fo_list2 {
-    max-width: none !important;
-    display: flex !important;
-    flex-wrap: wrap;
+    align-self: flex-start !important;
 }
-.fo_list2 > p {
-    flex: 0 0 100%;
-    width: 100%;
-}
-.fo_list2 > ul {
+.footer .center .footer_right .fo_list2 ul {
     float: none !important;
-    display: block !important;
-    flex: 0 0 auto;
-    min-width: 0 !important;
-    margin-right: 24px;
-}
-.fo_list2 ul li {
-    white-space: nowrap;
-}
-.fo_list2 ul:last-child li::before {
-    content: "| ";
-    color: #8C8C8C;
+    margin-left: 0 !important;
 }
 
 /* ===== Mobile Responsive Fixes ===== */
@@ -166,9 +150,6 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     /* Footer — stack columns */
     .footer .center .footer_right {
         flex-wrap: wrap;
-    }
-    .fo_list2 > ul {
-        margin-right: 16px;
     }
 }
 
