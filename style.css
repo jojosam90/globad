@@ -226,6 +226,13 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     .footer .center .footer_right .fo_list2 {
         width: 100% !important;
     }
+    /* Footer — spacing above OFFICES and the block that follows */
+    .footer .center .footer_right .fo_list2 {
+        margin-top: 0.4rem !important;
+    }
+    .footer .center .footer_right .fo_list3 {
+        margin-top: 0.4rem !important;
+    }
 }
 
 /* ===== Mobile menu marquee: below News, centred ===== */
