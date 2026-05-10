@@ -1,3 +1,25 @@
+/* ===== Fonts: Outfit (body) + Playfair Display (headings) — replaces Yeahmobi's Montserrat/Gloock ===== */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* Override vendor font aliases so all Montserrat usage becomes Outfit */
+@font-face { font-family: 'mm'; src: local('Outfit'); font-weight: 400; }
+@font-face { font-family: 'ms'; src: local('Outfit'); font-weight: 600; }
+@font-face { font-family: 'me'; src: local('Outfit'); font-weight: 800; }
+@font-face { font-family: 'mi'; src: local('Outfit'); font-style: italic; }
+@font-face { font-family: 'ps'; src: local('Outfit'); font-weight: 600; }
+@font-face { font-family: 'tr'; src: local('Playfair Display'); font-weight: 400; }
+@font-face { font-family: 'gr'; src: local('Playfair Display'); font-weight: 400; }
+
+/* Broad font override ensuring Outfit as the default everywhere */
+body, input, select, textarea, button {
+    font-family: 'Outfit', sans-serif !important;
+}
+
+/* Headings use Playfair Display */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif !important;
+}
+
 /* ===== Restore cursor hidden by vendor CSS (cursor: none !important on *) ===== */
 * { cursor: auto !important; }
 a, button, [onclick], label, input, select, textarea, summary { cursor: pointer !important; }
