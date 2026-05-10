@@ -221,6 +221,11 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     .footer .center .footer_right {
         flex-wrap: wrap;
     }
+    /* Footer — SITEMAP takes full row so OFFICES wraps below it */
+    .footer .center .footer_right .fo_list1,
+    .footer .center .footer_right .fo_list2 {
+        width: 100% !important;
+    }
 }
 
 /* ===== Mobile menu marquee: below News, centred ===== */
