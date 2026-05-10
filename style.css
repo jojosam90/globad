@@ -181,17 +181,20 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     }
 
     /* Footer: heading sits directly above its items — no extra gap */
-    .footer .center .footer_right .fo_list1 ul p,
-    .footer .center .footer_right .fo_list2 > p {
-        padding-bottom: 0 !important;
-        margin-bottom: 0 !important;
+    .footer .center .footer_right .fo_list1 p,
+    .footer .center .footer_right .fo_list2 p {
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 1.4 !important;
     }
-    .footer .center .footer_right .fo_list2 > ul {
-        margin-top: 0 !important;
+    .footer .center .footer_right .fo_list1 ul,
+    .footer .center .footer_right .fo_list2 ul {
+        margin-top: 0.08rem !important;
+        padding-top: 0 !important;
     }
     .footer .center .footer_right .fo_list1 ul li:first-child,
     .footer .center .footer_right .fo_list2 ul li:first-child {
-        margin-top: 0.05rem !important;
+        margin-top: 0 !important;
     }
 
     /* Mobile header — dark bg so white text is visible */
