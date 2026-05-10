@@ -493,6 +493,11 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     cursor: pointer !important;
 }
 
+/* ===== Footer: space between MALAYSIA HQ and SERVICES blocks ===== */
+.footer .center .footer_right .fo_list3 ul:nth-child(3) {
+    margin-top: 0.4rem;
+}
+
 /* ===== Locations section: heading + list share the left flex column ===== */
 .about_pl5 .pl5_box .pl5_box_tw {
     align-items: flex-start !important;
