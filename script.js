@@ -35,6 +35,7 @@ new WOW().init();
 // Language toggle
 $(function () {
     var lang = localStorage.getItem('globad_lang') || 'en';
+    var marqueeInitDone = false;
 
     function applyLang(l) {
         lang = l;
@@ -44,14 +45,18 @@ $(function () {
             var text = l === 'zh' ? this.getAttribute('data-zh') : this.getAttribute('data-en');
             if (text != null) { $(this).html(text); }
         });
-        // Marquee: reset UL html then reinitialise SuperSlide so it recalculates widths
-        var marqueeZh = '<li>联系我们！&nbsp;&nbsp;&nbsp;联系我们！&nbsp;&nbsp;&nbsp;联系我们！&nbsp;&nbsp;&nbsp;</li>';
-        var marqueeEn = "<li>let's talk! &nbsp;let's talk! &nbsp;let's talk! &nbsp;</li>";
-        var marqueeItem = l === 'zh' ? marqueeZh : marqueeEn;
-        $('.wap_menulist .picMarquee-left .bd ul').html(marqueeItem + marqueeItem + marqueeItem);
-        jQuery('.wap_menulist .picMarquee-left').slide({mainCell:'.bd ul', autoPlay:true, effect:'leftMarquee', vis:2, interTime:30, pnLoop:false});
-        $('.talk_pop .picMarquee-left .bd ul').html(marqueeItem + marqueeItem + marqueeItem);
-        jQuery('.talk_pop .picMarquee-left').slide({mainCell:'.bd ul', autoPlay:true, effect:'leftMarquee', vis:3, interTime:30, pnLoop:false});
+        // Marquee: update li text in-place; init SuperSlide only once to avoid stacked animations
+        var marqueeText = l === 'zh' ? '联系我们！&nbsp;&nbsp;&nbsp;' : "let's talk! &nbsp;";
+        if (!marqueeInitDone) {
+            $('.wap_menulist .picMarquee-left .bd ul li').html(marqueeText);
+            $('.talk_pop .picMarquee-left .bd ul li').html(marqueeText);
+            jQuery('.wap_menulist .picMarquee-left').slide({mainCell:'.bd ul', autoPlay:true, effect:'leftMarquee', vis:2, interTime:30, pnLoop:false});
+            jQuery('.talk_pop .picMarquee-left').slide({mainCell:'.bd ul', autoPlay:true, effect:'leftMarquee', vis:3, interTime:30, pnLoop:false});
+            marqueeInitDone = true;
+        } else {
+            $('.wap_menulist .picMarquee-left .bd ul li').html(marqueeText);
+            $('.talk_pop .picMarquee-left .bd ul li').html(marqueeText);
+        }
         // Non-default options (e.g. multi-select items): simple text update is enough
         $('option[data-en]').each(function () {
             if (this.value === '') return;
