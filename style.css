@@ -498,11 +498,6 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     align-items: flex-start !important;
 }
 
-/* ===== Footer BRANCHES two-column list ===== */
-.fo_branches_head {
-    margin-top: 0.3rem !important;
-    padding-bottom: 0.06rem !important;
-}
 
 /* ===== Timeline nav arrow buttons ===== */
 .about_pl6 .pl6_box .pl6_box_r .r_left,
