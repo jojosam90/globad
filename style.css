@@ -105,6 +105,51 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     margin-right: auto !important;
 }
 
+/* ===== Stats: single centred column at all sizes ===== */
+.about_pl4 .pl4_box ul {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+}
+.about_pl4 .pl4_box ul li {
+    width: 100% !important;
+    text-align: center;
+    margin-top: 0.56rem !important;
+}
+.about_pl4 .pl4_box ul li:first-child {
+    margin-top: 0 !important;
+}
+
+/* ===== Footer: BACK TO TOP on same row as GlobAd Sdn Bhd ===== */
+.footer .center .ban {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+.footer .center .ban .left {
+    float: none !important;
+    padding-top: 0 !important;
+}
+.footer .center .ban .gotop {
+    float: none !important;
+    flex-shrink: 0;
+}
+
+/* ===== Footer: tighten gap between column headings and their items ===== */
+.footer .center .footer_right .fo_list1 ul p,
+.footer .center .footer_right .fo_list2 > p {
+    padding-bottom: 0.02rem !important;
+    margin-bottom: 0 !important;
+}
+.footer .center .footer_right .fo_list2 > ul {
+    margin-top: 0.04rem !important;
+}
+.footer .center .footer_right .fo_list1 ul li:first-child,
+.footer .center .footer_right .fo_list2 ul li:first-child {
+    margin-top: 0 !important;
+}
+
 /* ===== Footer OFFICES column ===== */
 .footer .center .footer_right .fo_list2 {
     align-self: flex-start !important;
