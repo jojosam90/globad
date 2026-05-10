@@ -43,6 +43,14 @@ $(function () {
             var $el = $(this);
             $el.html(l === 'zh' ? $el.data('zh') : $el.data('en'));
         });
+        $('[data-ph-en]').each(function () {
+            var $el = $(this);
+            $el.attr('placeholder', l === 'zh' ? $el.data('ph-zh') : $el.data('ph-en'));
+        });
+        $('[data-val-en]').each(function () {
+            var $el = $(this);
+            $el.val(l === 'zh' ? $el.data('val-zh') : $el.data('val-en'));
+        });
         $('#lang-toggle, #lang-toggle-mobile').text(l === 'zh' ? 'EN' : '中文');
     }
 
