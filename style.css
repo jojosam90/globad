@@ -460,7 +460,7 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     background: #ffffff;
     color: #090613;
     border: none;
-    border-radius: 100px;
+    border-radius: 4px;
     font-size: 12px;
     font-weight: 700;
     padding: 5px 16px;
