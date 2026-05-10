@@ -16,6 +16,19 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
     color: #ffffff;
     background: none;
 }
+
+/* Nav: bring items together (vendor uses space-between which spreads 2 items to far edges) */
+.header .nav {
+    justify-content: flex-start !important;
+    gap: 0.4rem;
+}
+
+/* Nav: remove italic from active link (vendor sets font-style:italic on li.on > a) */
+.header .nav > li.on > a,
+.header .nav > li a:hover {
+    font-style: normal !important;
+    font-family: inherit !important;
+}
 .fixedNav {
     background: #090613 !important;
 }
@@ -442,10 +455,12 @@ a, button, [onclick], label, input, select, textarea, summary { cursor: pointer 
 
 /* ===== Language Toggle Button ===== */
 #lang-toggle {
+    -webkit-appearance: none;
+    appearance: none;
     background: #ffffff;
     color: #090613;
     border: none;
-    border-radius: 20px;
+    border-radius: 100px;
     font-size: 12px;
     font-weight: 700;
     padding: 5px 16px;
